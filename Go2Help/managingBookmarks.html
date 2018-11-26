@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	
+	<!-- Page information -->
+	<title>Managing Bookmarks</title>
+	
+	
+	<!-- Run as a webapp from home screen -->
+	<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+
+    <!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/docs.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	
+	
+
+</head>
+	<body ">
+		
+	<div class="container">		
+				<div class="three columns sidebar">
+					<nav>
+                    <h3 id="logo"><a href="index.html">Go2 Help</a></h3>
+						<ul>
+							<li><a href="gettingStarted.html">Getting Started</a></li>
+							<li><a href="managingBookmarks.html">Managing Bookmarks</a></li>
+							<li><a href="editing.html">Editing</a></li>
+							<li><a href="importing.html">Importing</a></li>
+							<li><a href="exporting.html">Exporting</a></li>
+							<li><a href="connecting.html">Connecting</a></li>
+							<li><a href="smartFolders.html">Smart Folders</a></li>
+							<li><a href="quickSearch.html">Quick Search</a></li>
+							<li><a href="manyThanks.html">Many Thanks</a></li>
+                            <li><a href="http://www.farmdog.co/go2/releasenotes.html">Release Notes</a></li>
+						</ul>
+					</nav>
+					&nbsp;
+                </div> <!-- End of three colunns sidebar div -->
+				<div class="twelve columns content offset-by-one">
+                    <header>
+                    <!--  <hr class="large" /> --> 
+                   <h3>  Managing Bookmarks </h3>
+                    </header>
+                    <p class="thin_line"></p>
+               <!-- Main Body-->
+				<p>Go2 uses Uniform Resource Locators, or URLs, so to add a new bookmark, you simply add the URL into the field labeled URL.</p>
+
+<p>The OK button will be disabled until Go2 determines that a URL that it can work with has been entered. A valid URL has several parts, let’s go over them now.  Here’s an example:</p>
+
+<pre><code>ftp://username:password@servername.com/path
+</code></pre>
+
+<p><strong>ftp://</strong> -- This is the protocol type of the bookmark. This is the portion of the URL that is listed under the “Type” column of the main Go2 window. Go2 can handle any protocol that is registered with OS X, here are a few common ones.</p>
+
+<ol>
+<li>ftp: File Transfer Protocol. One of the oldest protocols, this is handled by Finder by default.</li>
+<li>sftp: Secure File Transfer Protocol. You will need a third party application like CyberDuck or Transmit to handle sftp connections.</li>
+<li>http: Hypertext Transfer Protocol. Handled by default web browser, probably Safari.</li>
+<li>rdp: Remote Desktop Protocol. If you have Windows servers that you need access to, Go2 can store the connection information, and then launch either Microsoft RDC Client, or the excellent open-source CoRD application.</li>
+<li>ssh: Secure Shell. Go can manage SSH bookmarks for you, and it’s what I developed it for initially. By default, Go2 will launch Terminal.app to handle ssh connections.</li>
+<li>vnc: Virtual Network Computing. Go2 will launch the Screen Sharing application included with OS X to handle VNC connections.</li>
+</ol>
+
+
+<p>And More… OS X supports lots of URL protocols, either natively or through third party applications. If you know it works, drop it in Go2 for fast access.</p>
+
+<p><strong>username:password</strong> -- This portion of the URL is optional. The username is used for ftp, ssh, rdp, and vnc connections, and the password portion is optionally used for all except ssh. Currently, Go2 does not encrypt the password before storing it in the database, but that will be addressed in an update in the future.</p>
+
+<p><strong>servername.com</strong> -- This is the server that you are connecting to. This is also the portion of the URL that is displayed under the “Server Name” column in the main Go window.</p>
+
+<p><strong>/path</strong> -- This portion of the URL is optional, and used mainly for ftp and sftp connections.</p>
+
+
+                </div> <!-- End of twelve columns content offset-by-one div -->       
+				
+
+	</div> <!-- End of container div -->
+
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Meta -->
+	<meta charset="UTF-8" />
+	
+	<!-- Page information -->
+	<title>Setting Your Preferences</title>
+	
+	
+	<!-- Run as a webapp from home screen -->
+	<!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+
+    <!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/docs.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	
+	
+
+</head>
+	<body ">
+		
+	<div class="container">		
+				<div class="three columns sidebar">
+					<nav>
+                    <h3 id="logo"><a href="index.html">Go2 Help</a></h3>
+						<ul>
+							<li><a href="gettingStarted.html">Getting Started</a></li>
+							<li><a href="managingBookmarks.html">Managing Bookmarks</a></li>
+							<li><a href="editing.html">Editing</a></li>
+							<li><a href="importing.html">Importing</a></li>
+							<li><a href="exporting.html">Exporting</a></li>
+							<li><a href="connecting.html">Connecting</a></li>
+							<li><a href="smartFolders.html">Smart Folders</a></li>
+							<li><a href="quickSearch.html">Quick Search</a></li>
+							<li><a href="manyThanks.html">Many Thanks</a></li>
+                            <li><a href="http://www.farmdog.co/go2/releasenotes.html">Release Notes</a></li>
+						</ul>
+					</nav>
+					&nbsp;
+                </div> <!-- End of three colunns sidebar div -->
+				<div class="twelve columns content offset-by-one">
+                    <header>
+                    <!--  <hr class="large" /> --> 
+                   <h3>  Setting Your Preferences </h3>
+                    </header>
+                    <p class="thin_line"></p>
+               <!-- Main Body-->
+				<p>Throughout the development of Go2, I have tried to maintain a balance between features and cleanliness. I avoided needing preferences at all, but with Go2 1.3 I believe there are enough modifications to the user interface that someone might want to change how things are displayed. So, a proper preferences window was necessary.</p>
+
+<p>To open the preferences window, press the hotkey “⌘,” or select "<em>Go2</em>", and "<em>Preferences...</em>" It should look something like this:</p>
+
+<p><img src="images/prefs.png" alt="" style="border: none;" /></p>
+
+<p>Here you can select which of the default libraries to show, if your bookmarks should be available to Spotlight or not, and if you would like for Go2 to run only in the status bar or if you would like it in the Dock as well.</p>
+
+<p>If you choose not to have Go2 run in the Dock, the menu options are available in a new button that appears in the bottom left hand corner of the main Go2 window, or as a right click (or control click ) menu from the status bar icon.</p>
+
+<p>The second tab in the preferences sets the system wide shortcut for Go2's status bar quick search.</p>
+
+<p><strong>A Note On Spotlight</strong></p>
+
+<p>In version 1.2, Go2 could write anywhere on the filesystem that you had access to. Go2 took advantage of this by using your <em>Public</em> folder as a data folder for it's bookmarks, making them available to Spotlight. In version 1.3, Go2 runs in a high security container called a sandbox, so it can no longer write files to your <em>Public</em> folder. So, it writes the files to a folder here:</p>
+
+<pre><code>~/Library/containers/com.farmdog.go2/data/Desktop/go2data
+</code></pre>
+
+<p>I'm still working on getting Spotlight to reliably index this folder, but if you would like to use another launcher like Quicksilver or Launchbar, simply have them index this folder and they will work as expected.</p>
+
+
+                </div> <!-- End of twelve columns content offset-by-one div -->       
+				
+
+	</div> <!-- End of container div -->
+
+	</body>
+</html>

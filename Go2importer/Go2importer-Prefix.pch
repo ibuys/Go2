@@ -1,0 +1,6 @@
+//
+// Prefix header for all source files of the 'Go2importer' target in the 'Go2importer' project
+//
+
+#ifdef __OBJC__
+#endif

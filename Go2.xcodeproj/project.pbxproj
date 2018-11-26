@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
+		41BAA57E1F6DC09C00F3BC5E /* JBOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAA57D1F6DC09C00F3BC5E /* JBOutlineViewController.m */; };
+		41BAA5811F6DC0AD00F3BC5E /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAA5801F6DC0AD00F3BC5E /* Group.m */; };
+		541F68C5158BAE1F00BA12CF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5B6BD8141C61FC00D97417 /* CoreData.framework */; };
+		54681E0A158BDFAF008CE82B /* HostObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 54681E09158BDFAF008CE82B /* HostObject.m */; };
+		547305FA15FBF06D00701E8E /* go.icns in Resources */ = {isa = PBXBuildFile; fileRef = 547305F915FBF06D00701E8E /* go.icns */; };
+		54B923CA15FBA90200012A87 /* go_512x512@2x.icns in Resources */ = {isa = PBXBuildFile; fileRef = 54B923C915FBA90200012A87 /* go_512x512@2x.icns */; };
+		770B37ED0679A11B001EADE2 /* Go2_DataModel.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 770B37EC0679A11B001EADE2 /* Go2_DataModel.xcdatamodel */; };
+		77C8280E06725ACE000B614F /* Go2_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C8280C06725ACE000B614F /* Go2_AppDelegate.m */; };
+		89154279127923E600E8B358 /* JBSmallMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89154278127923E600E8B358 /* JBSmallMenuView.m */; };
+		8915443D1279DDC800E8B358 /* JBStatusItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8915443C1279DDC800E8B358 /* JBStatusItemView.m */; };
+		89830DE2127B42F0003F9C8B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89830DE1127B42F0003F9C8B /* Carbon.framework */; };
+		89AC119F1278C2AE0053C355 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89AC119E1278C2AE0053C355 /* QuartzCore.framework */; };
+		89D0E4A613057D240006DAA1 /* NSManagedObjectContext+JBReturnArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D0E4A513057D240006DAA1 /* NSManagedObjectContext+JBReturnArray.m */; };
+		89D51B891278797A001CECCA /* JBNiceWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B841278797A001CECCA /* JBNiceWindow.m */; };
+		89D51B8A1278797A001CECCA /* JBTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B861278797A001CECCA /* JBTableView.m */; };
+		89D51B8B1278797A001CECCA /* JBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B881278797A001CECCA /* JBTableViewCell.m */; };
+		89D51B9C1278799F001CECCA /* JBTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B8D1278799F001CECCA /* JBTableViewDelegate.m */; };
+		89D51B9D1278799F001CECCA /* JBMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B8F1278799F001CECCA /* JBMenuItem.m */; };
+		89D51B9E1278799F001CECCA /* ImportText.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B911278799F001CECCA /* ImportText.m */; };
+		89D51B9F1278799F001CECCA /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B931278799F001CECCA /* AppController.m */; };
+		89D51BA01278799F001CECCA /* JBAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B951278799F001CECCA /* JBAppController.m */; };
+		89D51BA11278799F001CECCA /* JBValidateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B971278799F001CECCA /* JBValidateTextField.m */; };
+		89D51BA21278799F001CECCA /* JBGetDefaultApps.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B991278799F001CECCA /* JBGetDefaultApps.m */; };
+		89D51BA31278799F001CECCA /* JBStringToIconTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D51B9B1278799F001CECCA /* JBStringToIconTransformer.m */; };
+		89D51BFC1278825A001CECCA /* go_menubarTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D51BFA1278825A001CECCA /* go_menubarTemplate.png */; };
+		89D51BFD1278825A001CECCA /* go_menubar_altTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D51BFB1278825A001CECCA /* go_menubar_altTemplate.png */; };
+		89F43CE013000FBD00402136 /* JBLaunch.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F43CDF13000FBD00402136 /* JBLaunch.m */; };
+		89F43CE41300102C00402136 /* doc_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 89F43CE31300102C00402136 /* doc_icon.icns */; };
+		89F43D8A130012A000402136 /* JBSaveAndLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 89F43D89130012A000402136 /* JBSaveAndLoad.m */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		AB30F1AD13916AF5008049CE /* JBCView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30F1AC13916AF5008049CE /* JBCView.m */; };
+		AB6A65DE1C1910790005079F /* JBSourceListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6A65DD1C1910790005079F /* JBSourceListDelegate.m */; };
+		AB6EC9B91399E9E400FC198D /* TZInfoTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AB6EC9B81399E9E400FC198D /* TZInfoTemplate.pdf */; };
+		AB74A38B142A9C63002FE67E /* JBArrowDownOutOfSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = AB74A38A142A9C63002FE67E /* JBArrowDownOutOfSearchField.m */; };
+		AB8B9950141C4D73003F9319 /* container-migration.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8B994F141C4D72003F9319 /* container-migration.plist */; };
+		ABCCD5EB138C46BC0067AE0B /* JBSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCCD5EA138C46BC0067AE0B /* JBSplitView.m */; };
+		ABCCD5F6138C47770067AE0B /* SourceListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCCD5F5138C47770067AE0B /* SourceListItem.m */; };
+		ABCCD5F9138C47980067AE0B /* JBSourceListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCCD5F8138C47980067AE0B /* JBSourceListController.m */; };
+		ABCCD62F138C4B1A0067AE0B /* application_osx_terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD628138C4B1A0067AE0B /* application_osx_terminal.png */; };
+		ABCCD630138C4B1A0067AE0B /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD629138C4B1A0067AE0B /* box.png */; };
+		ABCCD631138C4B1A0067AE0B /* computer.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD62A138C4B1A0067AE0B /* computer.png */; };
+		ABCCD632138C4B1A0067AE0B /* server.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD62B138C4B1A0067AE0B /* server.png */; };
+		ABCCD633138C4B1A0067AE0B /* table_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD62C138C4B1A0067AE0B /* table_edit.png */; };
+		ABCCD634138C4B1A0067AE0B /* audiobooks.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD62D138C4B1A0067AE0B /* audiobooks.png */; };
+		ABCCD635138C4B1A0067AE0B /* tux.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD62E138C4B1A0067AE0B /* tux.png */; };
+		ABD0161C149316C1009AE661 /* JBQSDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD0161B149316C1009AE661 /* JBQSDelegate.m */; };
+		ABDCDA3F139862D7002A8D9C /* Prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABDCDA3E139862D7002A8D9C /* Prefs.xib */; };
+		EF08C700149692DA00F27DD5 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = EF08C6FF149692DA00F27DD5 /* search.png */; };
+		EF97A79B142B6B3A005EAAA0 /* JBDownArrowTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EF97A79A142B6B3A005EAAA0 /* JBDownArrowTemplate.pdf */; };
+		EFB5C606142D0F100079D215 /* Go2Help in Resources */ = {isa = PBXBuildFile; fileRef = EFB5C605142D0F100079D215 /* Go2Help */; };
+		EFB73FCF1499177600B389F7 /* old-texture.png in Resources */ = {isa = PBXBuildFile; fileRef = EFB73FCE1499177600B389F7 /* old-texture.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5435F0F9158BB17100B9FDF1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Go2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Go2_Prefix.pch; sourceTree = "<group>"; };
+		41BAA57C1F6DC09C00F3BC5E /* JBOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBOutlineViewController.h; sourceTree = "<group>"; };
+		41BAA57D1F6DC09C00F3BC5E /* JBOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBOutlineViewController.m; sourceTree = "<group>"; };
+		41BAA57F1F6DC0AD00F3BC5E /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		41BAA5801F6DC0AD00F3BC5E /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		541F68C6158BAE2A00BA12CF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		54681E08158BDFAF008CE82B /* HostObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostObject.h; sourceTree = "<group>"; };
+		54681E09158BDFAF008CE82B /* HostObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostObject.m; sourceTree = "<group>"; };
+		547305F915FBF06D00701E8E /* go.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = go.icns; sourceTree = "<group>"; };
+		54B923C915FBA90200012A87 /* go_512x512@2x.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "go_512x512@2x.icns"; sourceTree = "<group>"; };
+		770B37EC0679A11B001EADE2 /* Go2_DataModel.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Go2_DataModel.xcdatamodel; sourceTree = "<group>"; };
+		77C82804067257F0000B614F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		77C8280B06725ACE000B614F /* Go2_AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Go2_AppDelegate.h; sourceTree = "<group>"; };
+		77C8280C06725ACE000B614F /* Go2_AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Go2_AppDelegate.m; sourceTree = "<group>"; };
+		797A7AE10DDCFCE80050D0C2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = ../../../../../../../../../../../../System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<group>"; };
+		797A7AE30DDCFCF40050D0C2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = ../../../../../../../../../../../../System/Library/Frameworks/CoreServices.framework; sourceTree = "<group>"; };
+		89154277127923E600E8B358 /* JBSmallMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSmallMenuView.h; sourceTree = "<group>"; };
+		89154278127923E600E8B358 /* JBSmallMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSmallMenuView.m; sourceTree = "<group>"; };
+		8915443B1279DDC800E8B358 /* JBStatusItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBStatusItemView.h; sourceTree = "<group>"; };
+		8915443C1279DDC800E8B358 /* JBStatusItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBStatusItemView.m; sourceTree = "<group>"; };
+		89830DE1127B42F0003F9C8B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		89AC119E1278C2AE0053C355 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		89D0E4A413057D240006DAA1 /* NSManagedObjectContext+JBReturnArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+JBReturnArray.h"; sourceTree = "<group>"; };
+		89D0E4A513057D240006DAA1 /* NSManagedObjectContext+JBReturnArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+JBReturnArray.m"; sourceTree = "<group>"; };
+		89D51B831278797A001CECCA /* JBNiceWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBNiceWindow.h; sourceTree = "<group>"; };
+		89D51B841278797A001CECCA /* JBNiceWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBNiceWindow.m; sourceTree = "<group>"; };
+		89D51B851278797A001CECCA /* JBTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBTableView.h; sourceTree = "<group>"; };
+		89D51B861278797A001CECCA /* JBTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBTableView.m; sourceTree = "<group>"; };
+		89D51B871278797A001CECCA /* JBTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBTableViewCell.h; sourceTree = "<group>"; };
+		89D51B881278797A001CECCA /* JBTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBTableViewCell.m; sourceTree = "<group>"; };
+		89D51B8C1278799F001CECCA /* JBTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBTableViewDelegate.h; sourceTree = "<group>"; };
+		89D51B8D1278799F001CECCA /* JBTableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBTableViewDelegate.m; sourceTree = "<group>"; };
+		89D51B8E1278799F001CECCA /* JBMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBMenuItem.h; sourceTree = "<group>"; };
+		89D51B8F1278799F001CECCA /* JBMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBMenuItem.m; sourceTree = "<group>"; };
+		89D51B901278799F001CECCA /* ImportText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImportText.h; sourceTree = "<group>"; };
+		89D51B911278799F001CECCA /* ImportText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImportText.m; sourceTree = "<group>"; };
+		89D51B921278799F001CECCA /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		89D51B931278799F001CECCA /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		89D51B941278799F001CECCA /* JBAppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBAppController.h; sourceTree = "<group>"; };
+		89D51B951278799F001CECCA /* JBAppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBAppController.m; sourceTree = "<group>"; };
+		89D51B961278799F001CECCA /* JBValidateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBValidateTextField.h; sourceTree = "<group>"; };
+		89D51B971278799F001CECCA /* JBValidateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBValidateTextField.m; sourceTree = "<group>"; };
+		89D51B981278799F001CECCA /* JBGetDefaultApps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBGetDefaultApps.h; sourceTree = "<group>"; };
+		89D51B991278799F001CECCA /* JBGetDefaultApps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBGetDefaultApps.m; sourceTree = "<group>"; };
+		89D51B9A1278799F001CECCA /* JBStringToIconTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBStringToIconTransformer.h; sourceTree = "<group>"; };
+		89D51B9B1278799F001CECCA /* JBStringToIconTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBStringToIconTransformer.m; sourceTree = "<group>"; };
+		89D51BFA1278825A001CECCA /* go_menubarTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go_menubarTemplate.png; sourceTree = "<group>"; };
+		89D51BFB1278825A001CECCA /* go_menubar_altTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go_menubar_altTemplate.png; sourceTree = "<group>"; };
+		89F43CDE13000FBD00402136 /* JBLaunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLaunch.h; sourceTree = "<group>"; };
+		89F43CDF13000FBD00402136 /* JBLaunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLaunch.m; sourceTree = "<group>"; };
+		89F43CE31300102C00402136 /* doc_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = doc_icon.icns; sourceTree = "<group>"; };
+		89F43D88130012A000402136 /* JBSaveAndLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSaveAndLoad.h; sourceTree = "<group>"; };
+		89F43D89130012A000402136 /* JBSaveAndLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSaveAndLoad.m; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Go2-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "Go2-Info.plist"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Go2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Go2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB30F1AB13916AF5008049CE /* JBCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBCView.h; sourceTree = "<group>"; };
+		AB30F1AC13916AF5008049CE /* JBCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBCView.m; sourceTree = "<group>"; };
+		AB5B6BD4141C61FC00D97417 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		AB5B6BD6141C61FC00D97417 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		AB5B6BD8141C61FC00D97417 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AB5B6BDA141C61FC00D97417 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AB663154141AE43C0065A893 /* Go2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Go2.entitlements; sourceTree = "<group>"; };
+		AB6A65DD1C1910790005079F /* JBSourceListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSourceListDelegate.m; sourceTree = "<group>"; };
+		AB6A65DF1C1912090005079F /* JBSourceListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSourceListDelegate.h; sourceTree = "<group>"; };
+		AB6EC9B81399E9E400FC198D /* TZInfoTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TZInfoTemplate.pdf; sourceTree = "<group>"; };
+		AB74A389142A9C63002FE67E /* JBArrowDownOutOfSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBArrowDownOutOfSearchField.h; sourceTree = "<group>"; };
+		AB74A38A142A9C63002FE67E /* JBArrowDownOutOfSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBArrowDownOutOfSearchField.m; sourceTree = "<group>"; };
+		AB8B994F141C4D72003F9319 /* container-migration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "container-migration.plist"; sourceTree = "<group>"; };
+		ABCCD5E9138C46BC0067AE0B /* JBSplitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSplitView.h; sourceTree = "<group>"; };
+		ABCCD5EA138C46BC0067AE0B /* JBSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSplitView.m; sourceTree = "<group>"; };
+		ABCCD5F4138C47770067AE0B /* SourceListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceListItem.h; sourceTree = "<group>"; };
+		ABCCD5F5138C47770067AE0B /* SourceListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceListItem.m; sourceTree = "<group>"; };
+		ABCCD5F7138C47980067AE0B /* JBSourceListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSourceListController.h; sourceTree = "<group>"; };
+		ABCCD5F8138C47980067AE0B /* JBSourceListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSourceListController.m; sourceTree = "<group>"; };
+		ABCCD628138C4B1A0067AE0B /* application_osx_terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = application_osx_terminal.png; sourceTree = "<group>"; };
+		ABCCD629138C4B1A0067AE0B /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		ABCCD62A138C4B1A0067AE0B /* computer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = computer.png; sourceTree = "<group>"; };
+		ABCCD62B138C4B1A0067AE0B /* server.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = server.png; sourceTree = "<group>"; };
+		ABCCD62C138C4B1A0067AE0B /* table_edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = table_edit.png; sourceTree = "<group>"; };
+		ABCCD62D138C4B1A0067AE0B /* audiobooks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audiobooks.png; sourceTree = "<group>"; };
+		ABCCD62E138C4B1A0067AE0B /* tux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tux.png; sourceTree = "<group>"; };
+		ABD0161A149316C1009AE661 /* JBQSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBQSDelegate.h; sourceTree = "<group>"; };
+		ABD0161B149316C1009AE661 /* JBQSDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBQSDelegate.m; sourceTree = "<group>"; };
+		ABDCDA3E139862D7002A8D9C /* Prefs.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Prefs.xib; sourceTree = "<group>"; };
+		EF08C6FF149692DA00F27DD5 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		EF97A79A142B6B3A005EAAA0 /* JBDownArrowTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = JBDownArrowTemplate.pdf; sourceTree = "<group>"; };
+		EFB5C605142D0F100079D215 /* Go2Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Go2Help; sourceTree = "<group>"; };
+		EFB73FCE1499177600B389F7 /* old-texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "old-texture.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				89AC119F1278C2AE0053C355 /* QuartzCore.framework in Frameworks */,
+				89830DE2127B42F0003F9C8B /* Carbon.framework in Frameworks */,
+				541F68C5158BAE1F00BA12CF /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
+				ABDCDA3E139862D7002A8D9C /* Prefs.xib */,
+				AB6A65DF1C1912090005079F /* JBSourceListDelegate.h */,
+				AB6A65DD1C1910790005079F /* JBSourceListDelegate.m */,
+				AB74A389142A9C63002FE67E /* JBArrowDownOutOfSearchField.h */,
+				AB74A38A142A9C63002FE67E /* JBArrowDownOutOfSearchField.m */,
+				AB30F1AB13916AF5008049CE /* JBCView.h */,
+				AB30F1AC13916AF5008049CE /* JBCView.m */,
+				ABCCD5E9138C46BC0067AE0B /* JBSplitView.h */,
+				ABCCD5EA138C46BC0067AE0B /* JBSplitView.m */,
+				89D51B8C1278799F001CECCA /* JBTableViewDelegate.h */,
+				89D51B8D1278799F001CECCA /* JBTableViewDelegate.m */,
+				89D51B831278797A001CECCA /* JBNiceWindow.h */,
+				89D51B841278797A001CECCA /* JBNiceWindow.m */,
+				89D51B851278797A001CECCA /* JBTableView.h */,
+				89D51B861278797A001CECCA /* JBTableView.m */,
+				89D51B871278797A001CECCA /* JBTableViewCell.h */,
+				89D51B881278797A001CECCA /* JBTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB5B6BDA141C61FC00D97417 /* Foundation.framework */,
+				AB5B6BD8141C61FC00D97417 /* CoreData.framework */,
+				AB5B6BD6141C61FC00D97417 /* CoreFoundation.framework */,
+				AB5B6BD4141C61FC00D97417 /* CoreServices.framework */,
+				541F68C6158BAE2A00BA12CF /* SystemConfiguration.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				89AC119E1278C2AE0053C355 /* QuartzCore.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				797A7AE30DDCFCF40050D0C2 /* CoreServices.framework */,
+				797A7AE10DDCFCE80050D0C2 /* CoreFoundation.framework */,
+				77C82804067257F0000B614F /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				89830DE1127B42F0003F9C8B /* Carbon.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Go2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Go2 */ = {
+			isa = PBXGroup;
+			children = (
+				7756732906782D8800D1FEB8 /* Models */,
+				891544651279E01400E8B358 /* StatusItem */,
+				080E96DDFE201D6D7F000001 /* View */,
+				89D51B8212787966001CECCA /* Controller */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Go2;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Go2_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				547305F915FBF06D00701E8E /* go.icns */,
+				AB8B994F141C4D72003F9319 /* container-migration.plist */,
+				AB663154141AE43C0065A893 /* Go2.entitlements */,
+				EFB73FCE1499177600B389F7 /* old-texture.png */,
+				EF08C6FF149692DA00F27DD5 /* search.png */,
+				EFB5C605142D0F100079D215 /* Go2Help */,
+				EF97A79A142B6B3A005EAAA0 /* JBDownArrowTemplate.pdf */,
+				AB6EC9B81399E9E400FC198D /* TZInfoTemplate.pdf */,
+				ABCCD627138C4B1A0067AE0B /* icons */,
+				89F43CE31300102C00402136 /* doc_icon.icns */,
+				54B923C915FBA90200012A87 /* go_512x512@2x.icns */,
+				89D51BFA1278825A001CECCA /* go_menubarTemplate.png */,
+				89D51BFB1278825A001CECCA /* go_menubar_altTemplate.png */,
+				8D1107310486CEB800E47090 /* Go2-Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7756732906782D8800D1FEB8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABCCD5F4138C47770067AE0B /* SourceListItem.h */,
+				ABCCD5F5138C47770067AE0B /* SourceListItem.m */,
+				41BAA57F1F6DC0AD00F3BC5E /* Group.h */,
+				41BAA5801F6DC0AD00F3BC5E /* Group.m */,
+				54681E08158BDFAF008CE82B /* HostObject.h */,
+				54681E09158BDFAF008CE82B /* HostObject.m */,
+				770B37EC0679A11B001EADE2 /* Go2_DataModel.xcdatamodel */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		891544651279E01400E8B358 /* StatusItem */ = {
+			isa = PBXGroup;
+			children = (
+				ABD0161A149316C1009AE661 /* JBQSDelegate.h */,
+				ABD0161B149316C1009AE661 /* JBQSDelegate.m */,
+				8915443B1279DDC800E8B358 /* JBStatusItemView.h */,
+				8915443C1279DDC800E8B358 /* JBStatusItemView.m */,
+				89D51B8E1278799F001CECCA /* JBMenuItem.h */,
+				89D51B8F1278799F001CECCA /* JBMenuItem.m */,
+				89154277127923E600E8B358 /* JBSmallMenuView.h */,
+				89154278127923E600E8B358 /* JBSmallMenuView.m */,
+			);
+			name = StatusItem;
+			sourceTree = "<group>";
+		};
+		89D51B8212787966001CECCA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				41BAA57C1F6DC09C00F3BC5E /* JBOutlineViewController.h */,
+				41BAA57D1F6DC09C00F3BC5E /* JBOutlineViewController.m */,
+				ABCCD5F7138C47980067AE0B /* JBSourceListController.h */,
+				ABCCD5F8138C47980067AE0B /* JBSourceListController.m */,
+				77C8280B06725ACE000B614F /* Go2_AppDelegate.h */,
+				77C8280C06725ACE000B614F /* Go2_AppDelegate.m */,
+				89F43D88130012A000402136 /* JBSaveAndLoad.h */,
+				89F43D89130012A000402136 /* JBSaveAndLoad.m */,
+				89F43CDE13000FBD00402136 /* JBLaunch.h */,
+				89F43CDF13000FBD00402136 /* JBLaunch.m */,
+				89D51B901278799F001CECCA /* ImportText.h */,
+				89D51B911278799F001CECCA /* ImportText.m */,
+				89D51B921278799F001CECCA /* AppController.h */,
+				89D51B931278799F001CECCA /* AppController.m */,
+				89D51B941278799F001CECCA /* JBAppController.h */,
+				89D51B951278799F001CECCA /* JBAppController.m */,
+				89D51B961278799F001CECCA /* JBValidateTextField.h */,
+				89D51B971278799F001CECCA /* JBValidateTextField.m */,
+				89D51B981278799F001CECCA /* JBGetDefaultApps.h */,
+				89D51B991278799F001CECCA /* JBGetDefaultApps.m */,
+				89D51B9A1278799F001CECCA /* JBStringToIconTransformer.h */,
+				89D51B9B1278799F001CECCA /* JBStringToIconTransformer.m */,
+				89D0E4A413057D240006DAA1 /* NSManagedObjectContext+JBReturnArray.h */,
+				89D0E4A513057D240006DAA1 /* NSManagedObjectContext+JBReturnArray.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ABCCD627138C4B1A0067AE0B /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				ABCCD628138C4B1A0067AE0B /* application_osx_terminal.png */,
+				ABCCD629138C4B1A0067AE0B /* box.png */,
+				ABCCD62A138C4B1A0067AE0B /* computer.png */,
+				ABCCD62B138C4B1A0067AE0B /* server.png */,
+				ABCCD62C138C4B1A0067AE0B /* table_edit.png */,
+				ABCCD62D138C4B1A0067AE0B /* audiobooks.png */,
+				ABCCD62E138C4B1A0067AE0B /* tux.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Go2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Go2" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				EF177DA3142A1D45009E035F /* ShellScript */,
+				5435F0F9158BB17100B9FDF1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Go2;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Go2;
+			productReference = 8D1107320486CEB800E47090 /* Go2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					8D1107260486CEB800E47090 = {
+						DevelopmentTeam = 22VH3XXRN4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "Go2" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Go2 */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Go2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */,
+				89D51BFC1278825A001CECCA /* go_menubarTemplate.png in Resources */,
+				89D51BFD1278825A001CECCA /* go_menubar_altTemplate.png in Resources */,
+				89F43CE41300102C00402136 /* doc_icon.icns in Resources */,
+				ABCCD62F138C4B1A0067AE0B /* application_osx_terminal.png in Resources */,
+				ABCCD630138C4B1A0067AE0B /* box.png in Resources */,
+				ABCCD631138C4B1A0067AE0B /* computer.png in Resources */,
+				ABCCD632138C4B1A0067AE0B /* server.png in Resources */,
+				ABCCD633138C4B1A0067AE0B /* table_edit.png in Resources */,
+				ABCCD634138C4B1A0067AE0B /* audiobooks.png in Resources */,
+				ABCCD635138C4B1A0067AE0B /* tux.png in Resources */,
+				ABDCDA3F139862D7002A8D9C /* Prefs.xib in Resources */,
+				AB6EC9B91399E9E400FC198D /* TZInfoTemplate.pdf in Resources */,
+				AB8B9950141C4D73003F9319 /* container-migration.plist in Resources */,
+				EF97A79B142B6B3A005EAAA0 /* JBDownArrowTemplate.pdf in Resources */,
+				EFB5C606142D0F100079D215 /* Go2Help in Resources */,
+				EF08C700149692DA00F27DD5 /* search.png in Resources */,
+				EFB73FCF1499177600B389F7 /* old-texture.png in Resources */,
+				54B923CA15FBA90200012A87 /* go_512x512@2x.icns in Resources */,
+				547305FA15FBF06D00701E8E /* go.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EF177DA3142A1D45009E035F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PLIST_FILE=\"\"\nif [ -f \"$INFOPLIST_FILE\" ]; then\nPLIST_FILE=\"$INFOPLIST_FILE\"\nelse\nif [ -f \"$SRCROOT/$INFOPLIST_FILE\" ]; then\nPLIST_FILE=\"$SRCROOT/$INFOPLIST_FILE\"\nelse\nexit 0\nfi\nfi\nBN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" $PLIST_FILE)\nBN=$(($BN + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BN\" $PLIST_FILE\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				77C8280E06725ACE000B614F /* Go2_AppDelegate.m in Sources */,
+				770B37ED0679A11B001EADE2 /* Go2_DataModel.xcdatamodel in Sources */,
+				89D51B891278797A001CECCA /* JBNiceWindow.m in Sources */,
+				89D51B8A1278797A001CECCA /* JBTableView.m in Sources */,
+				89D51B8B1278797A001CECCA /* JBTableViewCell.m in Sources */,
+				89D51B9C1278799F001CECCA /* JBTableViewDelegate.m in Sources */,
+				89D51B9D1278799F001CECCA /* JBMenuItem.m in Sources */,
+				89D51B9E1278799F001CECCA /* ImportText.m in Sources */,
+				89D51B9F1278799F001CECCA /* AppController.m in Sources */,
+				89D51BA01278799F001CECCA /* JBAppController.m in Sources */,
+				41BAA57E1F6DC09C00F3BC5E /* JBOutlineViewController.m in Sources */,
+				89D51BA11278799F001CECCA /* JBValidateTextField.m in Sources */,
+				41BAA5811F6DC0AD00F3BC5E /* Group.m in Sources */,
+				89D51BA21278799F001CECCA /* JBGetDefaultApps.m in Sources */,
+				89D51BA31278799F001CECCA /* JBStringToIconTransformer.m in Sources */,
+				89154279127923E600E8B358 /* JBSmallMenuView.m in Sources */,
+				8915443D1279DDC800E8B358 /* JBStatusItemView.m in Sources */,
+				89F43CE013000FBD00402136 /* JBLaunch.m in Sources */,
+				89F43D8A130012A000402136 /* JBSaveAndLoad.m in Sources */,
+				89D0E4A613057D240006DAA1 /* NSManagedObjectContext+JBReturnArray.m in Sources */,
+				ABCCD5EB138C46BC0067AE0B /* JBSplitView.m in Sources */,
+				ABCCD5F6138C47770067AE0B /* SourceListItem.m in Sources */,
+				ABCCD5F9138C47980067AE0B /* JBSourceListController.m in Sources */,
+				AB30F1AD13916AF5008049CE /* JBCView.m in Sources */,
+				AB74A38B142A9C63002FE67E /* JBArrowDownOutOfSearchField.m in Sources */,
+				AB6A65DE1C1910790005079F /* JBSourceListDelegate.m in Sources */,
+				ABD0161C149316C1009AE661 /* JBQSDelegate.m in Sources */,
+				54681E0A158BDFAF008CE82B /* HostObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F7446980DB6B7EA00F9684A /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26FC0A850875C7B200E6366F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 22VH3XXRN4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Go2_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = "Go2-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.farmdog.go2pro;
+				PRODUCT_NAME = Go2;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		26FC0A860875C7B200E6366F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 22VH3XXRN4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Go2_Prefix.pch;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = "Go2-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.farmdog.go2pro;
+				PRODUCT_NAME = Go2;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		26FC0A890875C7B200E6366F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				PROVISIONING_PROFILE = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				WARNING_CFLAGS = "";
+			};
+			name = Debug;
+		};
+		26FC0A8A0875C7B200E6366F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_POINTER_SIGNEDNESS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = YES;
+				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_MISSING_PARENTHESES = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_PKGINFO_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "";
+				PROVISIONING_PROFILE = "";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
+				WARNING_CFLAGS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26FC0A840875C7B200E6366F /* Build configuration list for PBXNativeTarget "Go2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FC0A850875C7B200E6366F /* Debug */,
+				26FC0A860875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26FC0A880875C7B200E6366F /* Build configuration list for PBXProject "Go2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26FC0A890875C7B200E6366F /* Debug */,
+				26FC0A8A0875C7B200E6366F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

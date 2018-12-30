@@ -853,36 +853,22 @@ CA
                 <outlet property="coreArrayController" destination="523" id="892"/>
             </connections>
         </customObject>
-        <customObject id="935" userLabel="Source List Controller" customClass="JBSourceListController">
-            <connections>
-                <outlet property="bookmarkListArrayController" destination="523" id="941"/>
-                <outlet property="bookmarkListTableView" destination="600" id="942"/>
-                <outlet property="mainWindow" destination="594" id="943"/>
-                <outlet property="myPredicateEditor" destination="982" id="1017"/>
-                <outlet property="mySearchField" destination="610" id="1325"/>
-                <outlet property="searchField" destination="610" id="1427"/>
-                <outlet property="sheet" destination="976" id="978"/>
-                <outlet property="smartFolderNameTextView" destination="1035" id="1047"/>
-                <outlet property="smartOKButton" destination="1000" id="1050"/>
-                <outlet property="textValidator" destination="530" id="1385"/>
-            </connections>
-        </customObject>
         <window title="Smart Folder" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" visibleAtLaunch="NO" frameAutosaveName="predicateWindow" animationBehavior="default" id="976">
             <windowStyleMask key="styleMask" titled="YES" documentModal="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="494" y="364" width="486" height="194"/>
+            <rect key="contentRect" x="494" y="364" width="486" height="245"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <value key="maxSize" type="size" width="486" height="800"/>
             <view key="contentView" focusRingType="none" id="977">
-                <rect key="frame" x="0.0" y="0.0" width="486" height="194"/>
+                <rect key="frame" x="0.0" y="0.0" width="486" height="245"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <scrollView focusRingType="none" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" findBarPosition="aboveHorizontalRuler" id="979">
-                        <rect key="frame" x="20" y="58" width="446" height="77"/>
+                        <rect key="frame" x="20" y="47" width="446" height="139"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="1rd-OY-Wd1">
-                            <rect key="frame" x="0.0" y="0.0" width="446" height="77"/>
-                            <autoresizingMask key="autoresizingMask"/>
+                            <rect key="frame" x="0.0" y="0.0" width="446" height="139"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <predicateEditor focusRingType="none" verticalHuggingPriority="750" nestingMode="compound" rowHeight="25" id="982">
                                     <rect key="frame" x="0.0" y="0.0" width="446" height="77"/>
@@ -1003,7 +989,7 @@ DQ
 </string>
                         </buttonCell>
                         <connections>
-                            <action selector="closeEditor:" target="nCg-fK-LgR" id="gc6-Zp-Pdy"/>
+                            <action selector="closeEditor:" target="nCg-fK-LgR" id="yag-yA-qp7"/>
                             <outlet property="nextKeyView" destination="1020" id="1031"/>
                         </connections>
                     </button>
@@ -1023,7 +1009,7 @@ Gw
                         </connections>
                     </button>
                     <textField verticalHuggingPriority="750" id="1035">
-                        <rect key="frame" x="132" y="150" width="334" height="19"/>
+                        <rect key="frame" x="132" y="201" width="334" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="1036">
                             <font key="font" metaFont="smallSystem"/>
@@ -1036,7 +1022,7 @@ Gw
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" id="1037">
-                        <rect key="frame" x="17" y="155" width="110" height="14"/>
+                        <rect key="frame" x="17" y="206" width="110" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Smart Folder Name:" id="1038">
                             <font key="font" metaFont="smallSystem"/>
@@ -1060,6 +1046,7 @@ Gw
             <connections>
                 <outlet property="initialFirstResponder" destination="1035" id="1301"/>
             </connections>
+            <point key="canvasLocation" x="-126" y="141.5"/>
         </window>
         <menu title="Smart Right Click" id="1024">
             <items>
@@ -1257,6 +1244,20 @@ CA
         </customView>
         <treeController childrenKeyPath="children" leafKeyPath="isLeaf" id="99o-Fd-oqh"/>
         <customObject id="KLt-ZB-iaE" customClass="JBSourceListDelegate"/>
+        <customObject id="935" userLabel="Source List Controller" customClass="JBSourceListController">
+            <connections>
+                <outlet property="bookmarkListArrayController" destination="523" id="941"/>
+                <outlet property="bookmarkListTableView" destination="600" id="942"/>
+                <outlet property="mainWindow" destination="594" id="943"/>
+                <outlet property="myPredicateEditor" destination="982" id="1017"/>
+                <outlet property="mySearchField" destination="610" id="1325"/>
+                <outlet property="searchField" destination="610" id="1427"/>
+                <outlet property="sheet" destination="976" id="978"/>
+                <outlet property="smartFolderNameTextView" destination="1035" id="1047"/>
+                <outlet property="smartOKButton" destination="1000" id="1050"/>
+                <outlet property="textValidator" destination="530" id="1385"/>
+            </connections>
+        </customObject>
         <customObject id="nCg-fK-LgR" customClass="JBOutlineViewController">
             <connections>
                 <outlet property="bookmarkListArrayController" destination="523" id="qCU-Cq-46L"/>

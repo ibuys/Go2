@@ -217,43 +217,49 @@
     
     [newSmartFolder setIcon:[NSImage imageNamed: @"NSFolderSmart"]];
     
+    NSDictionary *treeNode = [[self.groupsController arrangedObjects] representedObject];
     
-    NSLog(@"the tree node?: %@", [[self.groupsController arrangedObjects] representedObject]);
+    NSLog(@"the tree node?: %@", [treeNode valueForKey:@"children"]);
     
     
     
     
-    if ([[[self.groupsController arrangedObjects] representedObject] count] > 1)
+    if ([[treeNode valueForKey:@"children"] count] > 1)
     {
         NSLog(@"sourceListItems count is more than 1");
-        NSMutableArray *currentKids = [NSMutableArray arrayWithArray:[[sourceListItems objectAtIndex:1] children]];
-        [currentKids addObject:newSmartFolder];
-        [[sourceListItems objectAtIndex:1] setChildren:currentKids];
+        
+        NSUInteger indexArr[] = {1,1};
+        NSIndexPath *indexPath = [NSIndexPath indexPathWithIndexes:indexArr length:2];
+        [self.groupsController insertObject:newSmartFolder atArrangedObjectIndexPath:indexPath];
+
+        
+        
+//        NSMutableArray *currentKids = [NSMutableArray arrayWithArray:[[sourceListItems objectAtIndex:1] children]];
+//        
+//        
+//        
+//        
+//        
+//        [currentKids addObject:newSmartFolder];
+//        [[sourceListItems objectAtIndex:1] setChildren:currentKids];
     } else {
         
         NSLog(@"sourceListItems count is NOT more than 1");
-        
+        NSLog(@"selectionIndexPath = %@", [self.groupsController selectionIndexPath]);
         NSDictionary *initalizeDict = @{@"title": @"SMART FOLDERS",
                                         @"isLeaf": @(NO),
                                         @"children":@[newSmartFolder]
                                         };
         NSMutableDictionary *root = [[NSMutableDictionary alloc] initWithDictionary:initalizeDict];
+        
+        NSIndexPath *newPath =  [[NSIndexPath alloc] initWithIndex: 1];
 
-        [self.groupsController addObject:root];
+        [self.groupsController insertObject:root atArrangedObjectIndexPath:newPath];
+        [newPath release];
         [root release];
 
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     [bookmarkListTableView reloadData];
 }
 
@@ -309,38 +315,46 @@
     id selectedItem = [sidebarOutlineView itemAtRow:[sidebarOutlineView selectedRow]];
     NSTreeNode *node = (NSTreeNode *)selectedItem;
     Group *selectedGroup = [node representedObject];
-    NSString *selectedGroupText = [selectedGroup valueForKey:@"title"];
-
-    NSLog(@"Selected Group: %@", selectedGroupText);
-    if ([selectedGroupText isEqualToString:@"All Bookmarks"])
+    
+    if ([selectedGroup valueForKey:@"smartPredicate"] != nil)
     {
-        [bookmarkListArrayController setFilterPredicate: nil];
-    }
+        [bookmarkListArrayController setFilterPredicate: [selectedGroup valueForKey:@"smartPredicate"]];
 
-    if ([selectedGroupText isEqualToString:@"Web Apps"])
-    {
-        NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"http"];
-        [bookmarkListArrayController setFilterPredicate: filter];
+    } else {
+        
+        NSString *selectedGroupText = [selectedGroup valueForKey:@"title"];
+        NSLog(@"Selected Group: %@", selectedGroupText);
+        
+        if ([selectedGroupText isEqualToString:@"All Bookmarks"])
+        {
+            [bookmarkListArrayController setFilterPredicate: nil];
+            [bookmarkListArrayController setFetchPredicate: nil];
+        }
+        
+        if ([selectedGroupText isEqualToString:@"Web Apps"])
+        {
+            NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"http"];
+            [bookmarkListArrayController setFilterPredicate: filter];
+        }
+        
+        if ([selectedGroupText isEqualToString:@"Secure Shell"])
+        {
+            NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"ssh"];
+            [bookmarkListArrayController setFilterPredicate: filter];
+        }
+        
+        if ([selectedGroupText isEqualToString:@"VNC Connections"])
+        {
+            NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"vnc"];
+            [bookmarkListArrayController setFilterPredicate: filter];
+        }
+        
+        if ([selectedGroupText isEqualToString:@"FTP Servers"])
+        {
+            NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"ftp"];
+            [bookmarkListArrayController setFilterPredicate: filter];
+        }
     }
-
-    if ([selectedGroupText isEqualToString:@"Secure Shell"])
-    {
-        NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"ssh"];
-        [bookmarkListArrayController setFilterPredicate: filter];
-    }
-
-    if ([selectedGroupText isEqualToString:@"VNC Connections"])
-    {
-        NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"vnc"];
-        [bookmarkListArrayController setFilterPredicate: filter];
-    }
-
-    if ([selectedGroupText isEqualToString:@"FTP Servers"])
-    {
-        NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"ftp"];
-        [bookmarkListArrayController setFilterPredicate: filter];
-    }
-
 }
 
 

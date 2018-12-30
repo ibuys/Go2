@@ -176,24 +176,3 @@ static NSString *smartPredicateArchiveKey = @"smartPredicateKey";
 }
 
 @end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -54,23 +54,14 @@
 	
 	NSString *iconImage = [data valueForKey:@"iconImage"];
 	NSImage *image = [[NSWorkspace sharedWorkspace] iconForFile:iconImage];
-//	[image setFlipped:NO];
+    [image setFlipped:YES];
 	
 	NSImageInterpolation interpolation = [[NSGraphicsContext currentContext] imageInterpolation];
 	[[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];	
-	
-	//	[image drawInRect:NSMakeRect(cellFrame.origin.x+10,yOffset+10,cellFrame.size.height-20, cellFrame.size.height-20)
-	//			fromRect:NSMakeRect(0,0,[image size].width, [image size].height)
-	//		   operation:NSCompositeSourceOver
-	//			fraction:1.0];
-	
-//	NSPoint point = NSMakePoint(cellFrame.origin.x+10, cellFrame.origin.y+40);
+		
     NSPoint point = NSMakePoint(cellFrame.origin.x+10, cellFrame.origin.y+10);
 
-//	[image setScalesWhenResized:YES];
-//    [image lockFocusFlipped:YES];
 
-//	[image compositeToPoint:point operation:NSCompositeSourceOver];
     [image drawAtPoint:point fromRect:NSZeroRect operation:NSCompositingOperationSourceOver fraction:1.0];
 
 	
@@ -106,8 +97,7 @@
 		[textAttributes setValue:[NSColor blackColor] forKey:NSForegroundColorAttributeName];
 	}
 	[hostName drawInRect:NSMakeRect(cellFrame.origin.x+55,cellFrame.origin.y+7,cellFrame.size.width-60, cellFrame.size.height) withAttributes:textAttributes];
-	//NSLog(@"frameRect = %@", NSStringFromRect(NSMakeRect(cellFrame.origin.x+55,cellFrame.origin.y+10,cellFrame.size.width, cellFrame.size.height)));
-}	
+}
 
 - (void)setObjectValue:(id <NSCopying>)object {
     id oldObjectValue = [self objectValue];

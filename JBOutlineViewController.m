@@ -305,8 +305,42 @@
 
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification;
 {
+
     id selectedItem = [sidebarOutlineView itemAtRow:[sidebarOutlineView selectedRow]];
-    NSLog(@"Selected Group: %@",selectedItem );
+    NSTreeNode *node = (NSTreeNode *)selectedItem;
+    Group *selectedGroup = [node representedObject];
+    NSString *selectedGroupText = [selectedGroup valueForKey:@"title"];
+
+    NSLog(@"Selected Group: %@", selectedGroupText);
+    if ([selectedGroupText isEqualToString:@"All Bookmarks"])
+    {
+        [bookmarkListArrayController setFilterPredicate: nil];
+    }
+
+    if ([selectedGroupText isEqualToString:@"Web Apps"])
+    {
+        NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"http"];
+        [bookmarkListArrayController setFilterPredicate: filter];
+    }
+
+    if ([selectedGroupText isEqualToString:@"Secure Shell"])
+    {
+        NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"ssh"];
+        [bookmarkListArrayController setFilterPredicate: filter];
+    }
+
+    if ([selectedGroupText isEqualToString:@"VNC Connections"])
+    {
+        NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"vnc"];
+        [bookmarkListArrayController setFilterPredicate: filter];
+    }
+
+    if ([selectedGroupText isEqualToString:@"FTP Servers"])
+    {
+        NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"ftp"];
+        [bookmarkListArrayController setFilterPredicate: filter];
+    }
+
 }
 
 

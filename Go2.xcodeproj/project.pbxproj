@@ -81,8 +81,8 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		2F7446980DB6B7EA00F9684A /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Go2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Go2_Prefix.pch; sourceTree = "<group>"; };
+		41A40FE921D6857E00AF0087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		41BAA57C1F6DC09C00F3BC5E /* JBOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBOutlineViewController.h; sourceTree = "<group>"; };
 		41BAA57D1F6DC09C00F3BC5E /* JBOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBOutlineViewController.m; sourceTree = "<group>"; };
 		41BAA57F1F6DC0AD00F3BC5E /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
@@ -423,6 +423,7 @@
 				French,
 				German,
 				en,
+				Base,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Go2 */;
 			projectDirPath = "";
@@ -531,7 +532,7 @@
 		2F7446970DB6B7EA00F9684A /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2F7446980DB6B7EA00F9684A /* English */,
+				41A40FE921D6857E00AF0087 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -661,7 +662,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				PROVISIONING_PROFILE = "";
@@ -722,7 +723,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PKGINFO_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
 				PROVISIONING_PROFILE = "";

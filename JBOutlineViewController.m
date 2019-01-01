@@ -62,6 +62,7 @@
     
     if ([myDefaultManager fileExistsAtPath:go2_smart_data_path])
     {
+        [self addData];
         [self loadDataFromFile];
     } else {
         [self addData];
@@ -84,7 +85,7 @@
 {
     NSError *error;
     
-    NSIndexPath *newPath =  [[NSIndexPath alloc] initWithIndex: 0];
+    NSIndexPath *newPath =  [[NSIndexPath alloc] initWithIndex: 1];
     [self.groupsController setSelectionIndexPath:newPath];
     [newPath release];
     
@@ -100,7 +101,6 @@
     } else {
         NSLog(@"data not saved...");
     }
-    
 }
 
 

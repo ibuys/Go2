@@ -469,7 +469,7 @@ Gw
                         <popUpButton key="view" id="1533">
                             <rect key="frame" x="16" y="14" width="44" height="19"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="JBDownArrowTemplate" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="1536" id="1534">
+                            <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="1536" id="1534">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="smallSystem"/>
                                 <menu key="menu" title="OtherViews" id="1535">
@@ -1242,7 +1242,6 @@ CA
             </subviews>
         </customView>
         <treeController childrenKeyPath="children" leafKeyPath="isLeaf" id="99o-Fd-oqh"/>
-        <customObject id="KLt-ZB-iaE" customClass="JBSourceListDelegate"/>
         <customObject id="935" userLabel="Source List Controller" customClass="JBSourceListController">
             <connections>
                 <outlet property="bookmarkListArrayController" destination="523" id="941"/>

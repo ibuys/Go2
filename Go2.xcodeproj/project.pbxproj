@@ -41,7 +41,6 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		AB30F1AD13916AF5008049CE /* JBCView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30F1AC13916AF5008049CE /* JBCView.m */; };
-		AB6A65DE1C1910790005079F /* JBSourceListDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6A65DD1C1910790005079F /* JBSourceListDelegate.m */; };
 		AB6EC9B91399E9E400FC198D /* TZInfoTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AB6EC9B81399E9E400FC198D /* TZInfoTemplate.pdf */; };
 		AB74A38B142A9C63002FE67E /* JBArrowDownOutOfSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = AB74A38A142A9C63002FE67E /* JBArrowDownOutOfSearchField.m */; };
 		AB8B9950141C4D73003F9319 /* container-migration.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8B994F141C4D72003F9319 /* container-migration.plist */; };
@@ -144,8 +143,6 @@
 		AB5B6BD8141C61FC00D97417 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AB5B6BDA141C61FC00D97417 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB663154141AE43C0065A893 /* Go2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Go2.entitlements; sourceTree = "<group>"; };
-		AB6A65DD1C1910790005079F /* JBSourceListDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSourceListDelegate.m; sourceTree = "<group>"; };
-		AB6A65DF1C1912090005079F /* JBSourceListDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSourceListDelegate.h; sourceTree = "<group>"; };
 		AB6EC9B81399E9E400FC198D /* TZInfoTemplate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TZInfoTemplate.pdf; sourceTree = "<group>"; };
 		AB74A389142A9C63002FE67E /* JBArrowDownOutOfSearchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBArrowDownOutOfSearchField.h; sourceTree = "<group>"; };
 		AB74A38A142A9C63002FE67E /* JBArrowDownOutOfSearchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBArrowDownOutOfSearchField.m; sourceTree = "<group>"; };
@@ -192,8 +189,6 @@
 			children = (
 				2F7446970DB6B7EA00F9684A /* MainMenu.xib */,
 				ABDCDA3E139862D7002A8D9C /* Prefs.xib */,
-				AB6A65DF1C1912090005079F /* JBSourceListDelegate.h */,
-				AB6A65DD1C1910790005079F /* JBSourceListDelegate.m */,
 				AB74A389142A9C63002FE67E /* JBArrowDownOutOfSearchField.h */,
 				AB74A38A142A9C63002FE67E /* JBArrowDownOutOfSearchField.m */,
 				AB30F1AB13916AF5008049CE /* JBCView.h */,
@@ -512,7 +507,6 @@
 				ABCCD5F9138C47980067AE0B /* JBSourceListController.m in Sources */,
 				AB30F1AD13916AF5008049CE /* JBCView.m in Sources */,
 				AB74A38B142A9C63002FE67E /* JBArrowDownOutOfSearchField.m in Sources */,
-				AB6A65DE1C1910790005079F /* JBSourceListDelegate.m in Sources */,
 				ABD0161C149316C1009AE661 /* JBQSDelegate.m in Sources */,
 				54681E0A158BDFAF008CE82B /* HostObject.m in Sources */,
 			);

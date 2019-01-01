@@ -24,7 +24,8 @@
 - (id)init
 {
     self = [super init];
-    
+    NSLog(@"JBOutlineViewController init");
+
     if (self != nil)
     {
         
@@ -35,85 +36,38 @@
          selector: @selector(applicationWillTerminate:)
          name: NSApplicationWillTerminateNotification
          object: nil];
-         
-        
-//        [[NSNotificationCenter defaultCenter]
-//         addObserver: self
-//         selector: @selector(liveUpdateView:)
-//         name: NSControlTextDidChangeNotification
-//         object: myPredicateEditor];
-        
-        
+
+        [[NSNotificationCenter defaultCenter]
+         addObserver: self
+         selector: @selector(applicationDidFinishLaunching:)
+         name: NSApplicationDidFinishLaunchingNotification
+         object: nil];
     }
     return self;
 }
 
-- (void)awakeFromNib
-{
-    NSLog(@"awakeFromNib");
-    sourceListItems = [[NSMutableArray alloc] init];
-    
-    NSString *go2_smart_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
-    NSFileManager *myDefaultManager = [[NSFileManager alloc] init];
-    
-    if ([myDefaultManager fileExistsAtPath:go2_smart_data_path])
-    {
-        NSData *data = [NSData dataWithContentsOfFile:go2_smart_data_path];
-        [sourceListItems addObjectsFromArray:[NSKeyedUnarchiver unarchiveObjectWithData:data]];
-        
-    } else {
-        
-        // Set up the "Library" parent and children
-        Group *mainLibrary = [Group itemWithTitle:@"Library" identifier:@"mainLibrary"];
-        Group *sshBookmarks = [Group itemWithTitle:@"Secure Shell" identifier:@"sshBookmarks"];
-        Group *httpBookmarks = [Group itemWithTitle:@"Web Apps" identifier:@"httpBookmarks"];
-        Group *vncBookmarks = [Group itemWithTitle:@"VNC Connections" identifier:@"vncBookmarks"];
-        Group *ftpBookmarks = [Group itemWithTitle:@"FTP Servers" identifier:@"ftpBookmarks"];
-        Group *unsortedBookmarks = [Group itemWithTitle:@"All Bookmarks" identifier:@"unsortedBookmarks"];
-        
-        [sshBookmarks setIcon:[NSImage imageNamed:@"box.png"]];
-        [httpBookmarks setIcon:[NSImage imageNamed:@"box.png"]];
-        [vncBookmarks setIcon:[NSImage imageNamed:@"box.png"]];
-        [ftpBookmarks setIcon:[NSImage imageNamed:@"box.png"]];
-        [unsortedBookmarks setIcon:[NSImage imageNamed:@"box.png"]];
-        
-        
-        [mainLibrary setChildren:[NSMutableArray arrayWithObjects:unsortedBookmarks, sshBookmarks, httpBookmarks, vncBookmarks, ftpBookmarks, nil]];
-        [sourceListItems addObject:mainLibrary];
-    }
-    
-    [myDefaultManager release];
-    
-    // All done, display the data
-    //    [sourceList reloadData];
-    //    [sourceList registerForDraggedTypes:[NSArray arrayWithObject:@"SourceListPboardType"]];
-    //    [sourceList setDraggingSourceOperationMask:NSDragOperationEvery forLocal:YES];
-    //    [sourceList setDraggingSourceOperationMask:NSDragOperationEvery forLocal:NO];
-    //
-    //    [sourceList setTarget:self];
-    //    [sourceList setDoubleAction:@selector(editSmartFolder:)];
-    
-    // setup the nspredicateeditor
-    previousRowCount = 3;
-    [[myPredicateEditor enclosingScrollView] setHasVerticalScroller:YES];
-    
-    //    NSString *imageName;
-    //    NSImage *image1;
-    //
-    //    imageName = [[NSBundle mainBundle] pathForResource:@"texture" ofType:@"png"];
-    //    image1 = [[NSImage alloc] initWithContentsOfFile:imageName];    // note no need to retain since we call "alloc"
-    //
-    //    [sourceList setBackgroundImage:image1];
-    //    [image1 release];
+- (BOOL)allowsVibrancy {
+    return YES;
 }
-
 
 - (void)appDidLaunch
 {
     self.outlineView.delegate = self;
     self.outlineView.dataSource = self;
     self.outlineView.floatsGroupRows = NO; // Prevent a sticky header
-    [self addData];
+    
+    
+    NSString *go2_smart_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
+    NSFileManager *myDefaultManager = [[NSFileManager alloc] init];
+    
+    if ([myDefaultManager fileExistsAtPath:go2_smart_data_path])
+    {
+        [self loadDataFromFile];
+    } else {
+        [self addData];
+    }
+    [myDefaultManager release];
+
     
     // Expand the first group and select the first item in the list
     [self.outlineView expandItem:[self.outlineView itemAtRow:0]];
@@ -124,7 +78,52 @@
 }
 
 
+
+
+- (void)applicationWillTerminate:(NSNotification *)aNotification
+{
+    NSError *error;
+    
+    NSIndexPath *newPath =  [[NSIndexPath alloc] initWithIndex: 0];
+    [self.groupsController setSelectionIndexPath:newPath];
+    [newPath release];
+    
+    NSArray * afterArray = [self.groupsController selectedObjects];
+    NSMutableDictionary *archiveArray = [afterArray objectAtIndex:0];
+
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:archiveArray requiringSecureCoding:NO error:&error];
+    NSString *go2_name_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
+    
+    if ([data writeToFile:go2_name_data_path atomically:YES])
+    {
+        NSLog(@"data saved!");
+    } else {
+        NSLog(@"data not saved...");
+    }
+    
+}
+
+
 #pragma mark - Add data
+
+- (void) loadDataFromFile
+{
+    NSString *go2_smart_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
+    NSLog(@"JBOutlineViewController found go2_smartP_data");
+    
+    NSData *data = [NSData dataWithContentsOfFile:go2_smart_data_path];
+    NSLog(@"Data: %@", data);
+    
+    NSMutableDictionary *root = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSLog(@"archiveArray = %@", root);
+    NSLog(@"sourceListItems = %@", sourceListItems);
+    NSLog(@"sourceListItems after = %@", sourceListItems);
+    [self.groupsController addObject:root];
+}
+
+
+
+
 
 - (void) addData
 {
@@ -134,14 +133,14 @@
                                   @"isLeaf": @(NO),
                                   @"children":@[
                                         [Group groupWithTitle:@"All Bookmarks"],
-                                        [Group groupWithTitle:@"Web Apps"],
+                                        [Group groupWithTitle:@"Web"],
                                         [Group groupWithTitle:@"Secure Shell"],
                                         [Group groupWithTitle:@"VNC Connections"],
                                         [Group groupWithTitle:@"FTP Servers"]
                                           ]
                                   };
-    NSMutableDictionary *root = [[NSMutableDictionary alloc] initWithDictionary:initalizeDict];
     
+    NSMutableDictionary *root = [[NSMutableDictionary alloc] initWithDictionary:initalizeDict];
     [self.groupsController addObject:root];
     [root release];
 }
@@ -182,14 +181,6 @@
     
     [smartOKButton setAction:@selector(closeEditor:)];
 
-//    NSUInteger indexArr[] = {0,0};
-    
-//    Group *newGroup = [Group new];
-//    NSArray *list = [[self.groupsController arrangedObjects] childNodes];
-//    NSUInteger total = [list count];
-//
-//    [self.groupsController insertObject:newGroup atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndexes:indexArr length:total + 1]];
-//    [newGroup release];
 }
 
 - (IBAction)closeEditor:(id)sender
@@ -221,9 +212,7 @@
     
     NSLog(@"the tree node?: %@", [treeNode valueForKey:@"children"]);
     
-    
-    
-    
+    // Do we already have smart folders?
     if ([[treeNode valueForKey:@"children"] count] > 1)
     {
         NSLog(@"sourceListItems count is more than 1");
@@ -232,16 +221,6 @@
         NSIndexPath *indexPath = [NSIndexPath indexPathWithIndexes:indexArr length:2];
         [self.groupsController insertObject:newSmartFolder atArrangedObjectIndexPath:indexPath];
 
-        
-        
-//        NSMutableArray *currentKids = [NSMutableArray arrayWithArray:[[sourceListItems objectAtIndex:1] children]];
-//        
-//        
-//        
-//        
-//        
-//        [currentKids addObject:newSmartFolder];
-//        [[sourceListItems objectAtIndex:1] setChildren:currentKids];
     } else {
         
         NSLog(@"sourceListItems count is NOT more than 1");
@@ -331,7 +310,7 @@
             [bookmarkListArrayController setFetchPredicate: nil];
         }
         
-        if ([selectedGroupText isEqualToString:@"Web Apps"])
+        if ([selectedGroupText isEqualToString:@"Web"])
         {
             NSPredicate *filter = [NSPredicate predicateWithFormat: @"urlScheme=%@", @"http"];
             [bookmarkListArrayController setFilterPredicate: filter];

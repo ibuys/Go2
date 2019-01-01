@@ -11,8 +11,8 @@
 
 @interface JBSourceListController : NSObject
 {
-	NSMutableArray *sourceListItems;
-    NSArray *draggedItems;
+//    NSMutableArray *sourceListItems;
+//    NSArray *draggedItems;
 
 	IBOutlet NSArrayController *bookmarkListArrayController;
 	IBOutlet NSTableView *bookmarkListTableView;
@@ -41,11 +41,11 @@
 
 - (IBAction)saveSearch:(id)sender;
 
-- (void)createSmartList:(NSPredicate *)passedSmartPredicate named:(NSString *) newSmartFolderName;
+//- (void)createSmartList:(NSPredicate *)passedSmartPredicate named:(NSString *) newSmartFolderName;
 - (BOOL)deleteSelectedSmartFolder:(NSIndexSet *)selectedSmartFolderSet;
 
 
-- (NSString *)applicationSupportFolder;
+//- (NSString *)applicationSupportFolder;
 - (NSUndoManager *)undoManager;
 
 - (void)showVNCLibary:(BOOL)option;

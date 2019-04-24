@@ -54,7 +54,7 @@
 	
 	NSString *iconImage = [data valueForKey:@"iconImage"];
 	NSImage *image = [[NSWorkspace sharedWorkspace] iconForFile:iconImage];
-    [image setFlipped:YES];
+    [image lockFocusFlipped:YES];
 	
 	NSImageInterpolation interpolation = [[NSGraphicsContext currentContext] imageInterpolation];
 	[[NSGraphicsContext currentContext] setImageInterpolation: NSImageInterpolationHigh];	

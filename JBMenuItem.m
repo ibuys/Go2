@@ -38,19 +38,23 @@
 	//Allocates and loads the images into the application which will be used for our NSStatusItem
 	statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"go_menubarTemplate" ofType:@"png"]];
 	statusHighlightImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"go_menubar_altTemplate" ofType:@"png"]];
-	
 	//Sets the images in our NSStatusItem
-	[statusItem setImage:statusImage];
-	[statusItem setAlternateImage:statusHighlightImage];
-	[statusItem setToolTip:activeateGo2String];
+//    [statusItem setImage:statusImage];
+    statusItem.button.image = statusImage;
+//    [statusItem setAlternateImage:statusHighlightImage];
+    statusItem.button.alternateImage = statusHighlightImage;
+//    [statusItem setToolTip:activeateGo2String];
+    statusItem.button.toolTip = activeateGo2String;
 		
-	[statusItem setView:jbView];
+//    [statusItem setView:jbView];
 
 	
 	//[statusItem setTarget:self];
 	
-	[statusItem setHighlightMode:YES];
-	[statusItem setEnabled:YES];
+//    [statusItem setHighlightMode:YES];
+    [statusItem.button highlight:YES];
+//    [statusItem setEnabled:YES];
+    statusItem.button.enabled = YES;
 	[statusItem setMenu:statusMenu];
 }
 
@@ -159,7 +163,8 @@
 	[[statusMenu itemWithTitle:showGo2String] setTarget:self];
 	[[statusMenu itemWithTitle:showGo2String] setEnabled:YES];
 
-	[(JBStatusItemView *)[statusItem view] setHighlightOn];
+//    [(JBStatusItemView *)[statusItem view] setHighlightOn];
+    [statusItem.button highlight:YES];
 
 }
 
@@ -167,7 +172,8 @@
 {
 //	menu = nil;
 	// NSLog(@"menuDidCLose");
-	[(JBStatusItemView *)[statusItem view] setHighlightOff];
+//    [(JBStatusItemView *)[statusItem view] setHighlightOff];
+    [statusItem.button highlight:NO];
 	[[searchField window] makeFirstResponder:nil];
 
 }
@@ -242,14 +248,16 @@
 
 - (void)popUpStatusItemMenu
 {
-	[statusItem popUpStatusItemMenu:[statusItem menu]];
+//    [statusItem popUpStatusItemMenu:[statusItem menu]];
+    statusItem.menu = [statusItem menu];
 }
 
 - (void)popUpRightClickMenu;
 {
-    [(JBStatusItemView *)[statusItem view] setHighlightOn];
-
-    [statusItem popUpStatusItemMenu:rightClickMenu];
+//    [(JBStatusItemView *)[statusItem view] setHighlightOn];
+    [statusItem.button highlight:YES];
+//    [statusItem popUpStatusItemMenu:rightClickMenu];
+    statusItem.menu = rightClickMenu;
 }
 
 - (void)closeMenu

@@ -139,7 +139,7 @@
 //		}
 	}
 	
-	if ([[alert suppressionButton] state] == NSOnState) {
+    if ([[alert suppressionButton] state] == NSControlStateValueOn) {
 		[alert release];
             // Suppress this alert from now on.
 		[defaults setBool:YES forKey:@"jbConfirmDeleteSmartKey"];
@@ -290,33 +290,33 @@
 #pragma mark -
 #pragma mark Void Methods
 
-//- (void)createSmartList:(NSPredicate *)passedSmartPredicate named:(NSString *) newSmartFolderName
-//{
-//        // Undo
-//
-//    SourceListItem *newSmartFolder = [SourceListItem itemWithTitle:newSmartFolderName identifier:@"smartPredicate"];
-//    [newSmartFolder setValue:passedSmartPredicate forKey:@"smartPredicate"];
-//
-//
-//    [newSmartFolder setIcon:[NSImage imageNamed: @"NSFolderSmart"]];
-//
-//
-//    if ([sourceListItems count] > 1)
-//    {
-//        NSMutableArray *currentKids = [NSMutableArray arrayWithArray:[[sourceListItems objectAtIndex:1] children]];
-//        [currentKids addObject:newSmartFolder];
-//        [[sourceListItems objectAtIndex:1] setChildren:currentKids];
-//    } else {
-//        SourceListItem *smartFolderParent = [SourceListItem itemWithTitle:@"Smart Folders" identifier:@"smartFolderParent"];
-//        [smartFolderParent setChildren:[NSMutableArray arrayWithObjects:newSmartFolder, nil]];
-//        [sourceListItems addObject:smartFolderParent];
-//    }
-//
-//
-////    [sourceList reloadData];
-//
-//    [bookmarkListTableView reloadData];
-//}
+- (void)createSmartList:(NSPredicate *)passedSmartPredicate named:(NSString *) newSmartFolderName
+{
+        // Undo
+
+    SourceListItem *newSmartFolder = [SourceListItem itemWithTitle:newSmartFolderName identifier:@"smartPredicate"];
+    [newSmartFolder setValue:passedSmartPredicate forKey:@"smartPredicate"];
+
+
+    [newSmartFolder setIcon:[NSImage imageNamed: @"NSFolderSmart"]];
+
+
+    if ([sourceListItems count] > 1)
+    {
+        NSMutableArray *currentKids = [NSMutableArray arrayWithArray:[[sourceListItems objectAtIndex:1] children]];
+        [currentKids addObject:newSmartFolder];
+        [[sourceListItems objectAtIndex:1] setChildren:currentKids];
+    } else {
+        SourceListItem *smartFolderParent = [SourceListItem itemWithTitle:@"Smart Folders" identifier:@"smartFolderParent"];
+        [smartFolderParent setChildren:[NSMutableArray arrayWithObjects:newSmartFolder, nil]];
+        [sourceListItems addObject:smartFolderParent];
+    }
+
+
+//    [sourceList reloadData];
+
+    [bookmarkListTableView reloadData];
+}
 
 
 

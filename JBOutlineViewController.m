@@ -37,11 +37,11 @@
          name: NSApplicationWillTerminateNotification
          object: nil];
 
-        [[NSNotificationCenter defaultCenter]
-         addObserver: self
-         selector: @selector(applicationDidFinishLaunching:)
-         name: NSApplicationDidFinishLaunchingNotification
-         object: nil];
+//        [[NSNotificationCenter defaultCenter]
+//         addObserver: self
+//         selector: @selector(applicationDidFinishLaunching:)
+//         name: NSApplicationDidFinishLaunchingNotification
+//         object: nil];
     }
     return self;
 }
@@ -49,6 +49,11 @@
 - (BOOL)allowsVibrancy {
     return YES;
 }
+
+//- (void)applicationDidFinishLaunching
+//{
+//    NSLog(@"applicationDidFinishLaunching");
+//}
 
 - (void)appDidLaunch
 {
@@ -113,8 +118,9 @@
     
     NSData *data = [NSData dataWithContentsOfFile:go2_smart_data_path];
     NSLog(@"Data: %@", data);
-    
-    NSMutableDictionary *root = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSError *error;
+//    NSMutableDictionary *root = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSMutableDictionary *root = [NSKeyedUnarchiver unarchivedObjectOfClass:NSMutableDictionary.class fromData:data error:&error];
     NSLog(@"archiveArray = %@", root);
     NSLog(@"sourceListItems = %@", sourceListItems);
     NSLog(@"sourceListItems after = %@", sourceListItems);

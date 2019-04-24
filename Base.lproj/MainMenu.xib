@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -354,7 +354,7 @@ Gw
                                             <rect key="frame" x="0.0" y="0.0" width="259" height="550"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" selectionHighlightStyle="sourceList" columnSelection="YES" emptySelection="NO" autosaveName="com.farmdog.go.columnLayoutInfo" rowHeight="50" id="600" customClass="JBTableView">
+                                                <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" selectionHighlightStyle="sourceList" columnSelection="YES" emptySelection="NO" autosaveName="com.farmdog.go.columnLayoutInfo" rowHeight="50" rowSizeStyle="automatic" viewBased="YES" id="600" customClass="JBTableView">
                                                     <rect key="frame" x="0.0" y="0.0" width="259" height="550"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -373,16 +373,57 @@ Gw
                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                            <connections>
-                                                                <binding destination="523" name="value" keyPath="arrangedObjects" id="703">
-                                                                    <dictionary key="options">
-                                                                        <bool key="NSConditionallySetsEditable" value="YES"/>
-                                                                    </dictionary>
-                                                                </binding>
-                                                            </connections>
+                                                            <prototypeCellViews>
+                                                                <tableCellView id="NOm-Cy-Qda">
+                                                                    <rect key="frame" x="1" y="1" width="256" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="dCS-vg-Sma">
+                                                                            <rect key="frame" x="64" y="22" width="176" height="17"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="QVB-ht-BH6">
+                                                                                <font key="font" metaFont="system"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="NOm-Cy-Qda" name="value" keyPath="objectValue.hostName" id="Dyp-4m-Rub"/>
+                                                                            </connections>
+                                                                        </textField>
+                                                                        <imageView focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ATB-X4-Ogq">
+                                                                            <rect key="frame" x="16" y="3" width="42" height="42"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                            <imageCell key="cell" refusesFirstResponder="YES" focusRingType="none" alignment="left" imageScaling="proportionallyDown" id="EM6-ZE-FKc"/>
+                                                                            <connections>
+                                                                                <binding destination="NOm-Cy-Qda" name="value" keyPath="objectValue.iconImage" id="yOt-PP-Onm">
+                                                                                    <dictionary key="options">
+                                                                                        <string key="NSValueTransformerName">JBStringToIconTransformer</string>
+                                                                                    </dictionary>
+                                                                                </binding>
+                                                                            </connections>
+                                                                        </imageView>
+                                                                        <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" id="fWr-6b-zTp">
+                                                                            <rect key="frame" x="76" y="3" width="176" height="17"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="gu9-gL-gVa">
+                                                                                <font key="font" metaFont="system" size="10"/>
+                                                                                <color key="textColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="NOm-Cy-Qda" name="value" keyPath="objectValue.url" id="xcA-Am-Sdk"/>
+                                                                            </connections>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <connections>
+                                                                        <outlet property="textField" destination="dCS-vg-Sma" id="nZN-vR-2O2"/>
+                                                                    </connections>
+                                                                </tableCellView>
+                                                            </prototypeCellViews>
                                                         </tableColumn>
                                                     </tableColumns>
                                                     <connections>
+                                                        <binding destination="523" name="content" keyPath="arrangedObjects" id="rAo-ZL-Kpr"/>
                                                         <outlet property="delegate" destination="531" id="1377"/>
                                                         <outlet property="nextKeyView" destination="610" id="1455"/>
                                                         <outlet property="rightClickMenu" destination="885" id="889"/>
@@ -445,16 +486,16 @@ Gw
                     <toolbarItem implicitItemIdentifier="A170E21E-CEDA-4E18-A85A-836F2094DE57" label="Custom View" paletteLabel="Custom View" id="605">
                         <nil key="toolTip"/>
                         <size key="minSize" width="89" height="19"/>
-                        <size key="maxSize" width="146" height="21"/>
+                        <size key="maxSize" width="156" height="21"/>
                         <segmentedControl key="view" verticalHuggingPriority="750" id="612">
-                            <rect key="frame" x="0.0" y="14" width="139" height="21"/>
+                            <rect key="frame" x="0.0" y="14" width="156" height="21"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="automatic" trackingMode="momentary" id="613">
                                 <font key="font" metaFont="smallSystem"/>
                                 <segments>
-                                    <segment toolTip="Add New Bookmark" image="NSAddTemplate" imageScaling="proportionallyUpOrDown" width="55"/>
+                                    <segment toolTip="Add New Bookmark" image="NSAddTemplate" imageScaling="proportionallyUpOrDown" width="63"/>
                                     <segment label="i" toolTip="Bookmark Information" imageScaling="proportionallyUpOrDown"/>
-                                    <segment toolTip="Open Bookmark" image="NSRightFacingTriangleTemplate" imageScaling="proportionallyUpOrDown" width="55"/>
+                                    <segment toolTip="Open Bookmark" image="NSRightFacingTriangleTemplate" imageScaling="proportionallyUpOrDown" width="63"/>
                                 </segments>
                             </segmentedCell>
                             <connections>
@@ -469,7 +510,7 @@ Gw
                         <popUpButton key="view" id="1533">
                             <rect key="frame" x="16" y="14" width="44" height="19"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="1536" id="1534">
+                            <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="JBDownArrowTemplate" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="1536" id="1534">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="smallSystem"/>
                                 <menu key="menu" title="OtherViews" id="1535">
@@ -578,7 +619,7 @@ CA
                 <outlet property="initialFirstResponder" destination="610" id="1458"/>
                 <outlet property="myToolBar" destination="595" id="614"/>
             </connections>
-            <point key="canvasLocation" x="-153.5" y="-354"/>
+            <point key="canvasLocation" x="-230.5" y="-569"/>
         </window>
         <menu title="MainMenu" systemMenu="main" id="633" userLabel="MainMenu">
             <items>

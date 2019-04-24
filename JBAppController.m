@@ -513,13 +513,13 @@
 			
 			
 			
-			if ([[alert suppressionButton] state] == NSOnState) {
+            if ([[alert suppressionButton] state] == NSControlStateValueOn) {
 				// Suppress this alert from now on.
 				[defaults setBool:YES forKey:jbConfirmDeleteGoKey];
 			}
 		}
 		
-		if ([[alert suppressionButton] state] == NSOnState) {
+        if ([[alert suppressionButton] state] == NSControlStateValueOn) {
 			[alert release];
 			// Suppress this alert from now on.
 			[defaults setBool:YES forKey:jbConfirmDeleteGoKey];
@@ -556,9 +556,9 @@
 
 - (IBAction)connectToHost:(id)sender
 {
-    dispatch_queue_t queue = dispatch_get_global_queue(0,0);
+//    dispatch_queue_t queue = dispatch_get_global_queue(0,0);
 
-	dispatch_async(queue,^{
+//    dispatch_async(queue,^{
 	if ([hostListTableView numberOfSelectedRows] == 1) {
 		// OK, first, get the selected host
 		NSInteger row = [hostListTableView selectedRow];
@@ -607,7 +607,7 @@
 		
 	}
     
-    }); // end of GCD Dispatch queue 
+//    }); // end of GCD Dispatch queue
 }
 
 

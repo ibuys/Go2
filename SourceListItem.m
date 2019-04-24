@@ -54,15 +54,15 @@ static NSString *smartPredicateArchiveKey = @"smartPredicateKey";
 	[super dealloc];
 }
 
-- (void)finalize
-{
-	title = nil;
-	identifier = nil;
-	icon = nil;
-	children = nil;
-	
-	[super finalize];
-}
+//- (void)finalize
+//{
+//    title = nil;
+//    identifier = nil;
+//    icon = nil;
+//    children = nil;
+//    
+//    [super finalize];
+//}
 
 #pragma mark -
 #pragma mark Encoding Methods

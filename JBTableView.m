@@ -44,11 +44,11 @@
 	return [super menuForEvent:theEvent];
 }
 
-- (void)textDidEndEditing:(NSNotification *)notification
-{
-	//[myMenuApplet updateMenuApp];
-	[super textDidEndEditing: notification];
-}
+//- (void)textDidEndEditing:(NSNotification *)notification
+//{
+////    [myMenuApplet updateMenuApp];
+//    [super textDidEndEditing: notification];
+//}
 
 
 @end

@@ -17,7 +17,7 @@
     self = [super initWithFrame:frame];
     if (self) {
             //register for drags
-        [self registerForDraggedTypes:[NSArray arrayWithObjects: NSURLPboardType, nil]];
+        [self registerForDraggedTypes:[NSArray arrayWithObjects: NSPasteboardTypeURL, nil]];
         
         
 //        
@@ -151,9 +151,9 @@
         //sourceDragMask = [sender draggingSourceOperationMask];
     pboard = [sender draggingPasteboard];
     
-    if ( [[pboard types] containsObject:NSURLPboardType] ) 
+    if ( [[pboard types] containsObject:NSPasteboardTypeURL] ) 
     {
-        NSArray *files = [pboard propertyListForType:NSURLPboardType];
+        NSArray *files = [pboard propertyListForType:NSPasteboardTypeURL];
         
             // NSLog(@"Files: %@",[files objectAtIndex:0]);
         

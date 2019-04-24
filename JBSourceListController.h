@@ -11,7 +11,7 @@
 
 @interface JBSourceListController : NSObject
 {
-//    NSMutableArray *sourceListItems;
+    NSMutableArray *sourceListItems;
 //    NSArray *draggedItems;
 
 	IBOutlet NSArrayController *bookmarkListArrayController;

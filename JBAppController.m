@@ -903,25 +903,25 @@
 
 
 
-- (IBAction)changeSSHCheckbox:(id)sender
-{
-	[sourceListController showSSHLibary:[showSecureShellCheckbox state]];
-}
-
-- (IBAction)changeWebCheckbox:(id)sender
-{
-	[sourceListController showWebLibary:[showWebAppsCheckbox state]];
-}
-
-- (IBAction)changeVNCCheckbox:(id)sender
-{
-	[sourceListController showVNCLibary:[showVncCheckbox state]];
-}
-
-- (IBAction)changeFTPCheckbox:(id)sender
-{
-	[sourceListController showFTPLibary:[showFtpCheckbox state]];
-}
+//- (IBAction)changeSSHCheckbox:(id)sender
+//{
+//    [sourceListController showSSHLibary:[showSecureShellCheckbox state]];
+//}
+//
+//- (IBAction)changeWebCheckbox:(id)sender
+//{
+//    [sourceListController showWebLibary:[showWebAppsCheckbox state]];
+//}
+//
+//- (IBAction)changeVNCCheckbox:(id)sender
+//{
+//    [sourceListController showVNCLibary:[showVncCheckbox state]];
+//}
+//
+//- (IBAction)changeFTPCheckbox:(id)sender
+//{
+//    [sourceListController showFTPLibary:[showFtpCheckbox state]];
+//}
 
 
 #pragma mark - shortcutRecorder delegate methods

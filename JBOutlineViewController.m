@@ -1,6 +1,5 @@
 //
 //  JBOutlineViewController.m
-//  CloudChain
 //
 //  Created by Jonathan Buys on 9/6/17.
 //  Copyright © 2017 Fall Harvest. All rights reserved.
@@ -97,7 +96,7 @@
     NSArray * afterArray = [self.groupsController selectedObjects];
     NSMutableDictionary *archiveArray = [afterArray objectAtIndex:0];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:archiveArray requiringSecureCoding:YES error:&error];
-    NSString *go2_name_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
+//    NSString *go2_name_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
 //    NSURL *smartFolderPath = [NSURL fileURLWithPath:go2_name_data_path];
 //
 //    if ([data writeToURL:smartFolderPath options:NSDataWritingAtomic error:&error])

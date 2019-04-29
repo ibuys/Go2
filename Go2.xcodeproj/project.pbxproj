@@ -40,13 +40,11 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		AB30F1AD13916AF5008049CE /* JBCView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB30F1AC13916AF5008049CE /* JBCView.m */; };
 		AB6EC9B91399E9E400FC198D /* TZInfoTemplate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AB6EC9B81399E9E400FC198D /* TZInfoTemplate.pdf */; };
 		AB74A38B142A9C63002FE67E /* JBArrowDownOutOfSearchField.m in Sources */ = {isa = PBXBuildFile; fileRef = AB74A38A142A9C63002FE67E /* JBArrowDownOutOfSearchField.m */; };
 		AB8B9950141C4D73003F9319 /* container-migration.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB8B994F141C4D72003F9319 /* container-migration.plist */; };
 		ABCCD5EB138C46BC0067AE0B /* JBSplitView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCCD5EA138C46BC0067AE0B /* JBSplitView.m */; };
 		ABCCD5F6138C47770067AE0B /* SourceListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCCD5F5138C47770067AE0B /* SourceListItem.m */; };
-		ABCCD5F9138C47980067AE0B /* JBSourceListController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCCD5F8138C47980067AE0B /* JBSourceListController.m */; };
 		ABCCD62F138C4B1A0067AE0B /* application_osx_terminal.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD628138C4B1A0067AE0B /* application_osx_terminal.png */; };
 		ABCCD630138C4B1A0067AE0B /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD629138C4B1A0067AE0B /* box.png */; };
 		ABCCD631138C4B1A0067AE0B /* computer.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCCD62A138C4B1A0067AE0B /* computer.png */; };
@@ -135,8 +133,6 @@
 		89F43D89130012A000402136 /* JBSaveAndLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSaveAndLoad.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Go2-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "Go2-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Go2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Go2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB30F1AB13916AF5008049CE /* JBCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBCView.h; sourceTree = "<group>"; };
-		AB30F1AC13916AF5008049CE /* JBCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBCView.m; sourceTree = "<group>"; };
 		AB5B6BD4141C61FC00D97417 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		AB5B6BD6141C61FC00D97417 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		AB5B6BD8141C61FC00D97417 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -151,8 +147,6 @@
 		ABCCD5EA138C46BC0067AE0B /* JBSplitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSplitView.m; sourceTree = "<group>"; };
 		ABCCD5F4138C47770067AE0B /* SourceListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceListItem.h; sourceTree = "<group>"; };
 		ABCCD5F5138C47770067AE0B /* SourceListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceListItem.m; sourceTree = "<group>"; };
-		ABCCD5F7138C47980067AE0B /* JBSourceListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBSourceListController.h; sourceTree = "<group>"; };
-		ABCCD5F8138C47980067AE0B /* JBSourceListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBSourceListController.m; sourceTree = "<group>"; };
 		ABCCD628138C4B1A0067AE0B /* application_osx_terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = application_osx_terminal.png; sourceTree = "<group>"; };
 		ABCCD629138C4B1A0067AE0B /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
 		ABCCD62A138C4B1A0067AE0B /* computer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = computer.png; sourceTree = "<group>"; };
@@ -191,8 +185,6 @@
 				ABDCDA3E139862D7002A8D9C /* Prefs.xib */,
 				AB74A389142A9C63002FE67E /* JBArrowDownOutOfSearchField.h */,
 				AB74A38A142A9C63002FE67E /* JBArrowDownOutOfSearchField.m */,
-				AB30F1AB13916AF5008049CE /* JBCView.h */,
-				AB30F1AC13916AF5008049CE /* JBCView.m */,
 				ABCCD5E9138C46BC0067AE0B /* JBSplitView.h */,
 				ABCCD5EA138C46BC0067AE0B /* JBSplitView.m */,
 				89D51B8C1278799F001CECCA /* JBTableViewDelegate.h */,
@@ -331,8 +323,6 @@
 			children = (
 				41BAA57C1F6DC09C00F3BC5E /* JBOutlineViewController.h */,
 				41BAA57D1F6DC09C00F3BC5E /* JBOutlineViewController.m */,
-				ABCCD5F7138C47980067AE0B /* JBSourceListController.h */,
-				ABCCD5F8138C47980067AE0B /* JBSourceListController.m */,
 				77C8280B06725ACE000B614F /* Go2_AppDelegate.h */,
 				77C8280C06725ACE000B614F /* Go2_AppDelegate.m */,
 				89F43D88130012A000402136 /* JBSaveAndLoad.h */,
@@ -503,8 +493,6 @@
 				89D0E4A613057D240006DAA1 /* NSManagedObjectContext+JBReturnArray.m in Sources */,
 				ABCCD5EB138C46BC0067AE0B /* JBSplitView.m in Sources */,
 				ABCCD5F6138C47770067AE0B /* SourceListItem.m in Sources */,
-				ABCCD5F9138C47980067AE0B /* JBSourceListController.m in Sources */,
-				AB30F1AD13916AF5008049CE /* JBCView.m in Sources */,
 				AB74A38B142A9C63002FE67E /* JBArrowDownOutOfSearchField.m in Sources */,
 				ABD0161C149316C1009AE661 /* JBQSDelegate.m in Sources */,
 				54681E0A158BDFAF008CE82B /* HostObject.m in Sources */,

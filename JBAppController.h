@@ -10,7 +10,7 @@
 #import "JBMenuItem.h"
 #import "JBStatusItemView.h"
 #import "JBSaveAndLoad.h"
-#import "JBSourceListController.h"
+//#import "JBSourceListController.h"
 #import <dispatch/dispatch.h>
 
 @class PTHotKey;
@@ -57,7 +57,7 @@ extern NSString * const B6UnixCheckBoxKey;
 	IBOutlet NSTextField *delegateDisallowReasonField;
 	
 	IBOutlet NSWindow *prefsWindow;
-	IBOutlet JBSourceListController *sourceListController;
+//    IBOutlet JBSourceListController *sourceListController;
 
     IBOutlet JBQSDelegate *qsDelegate;
 
@@ -91,10 +91,10 @@ extern NSString * const B6UnixCheckBoxKey;
 - (void)hitHotKey:(PTHotKey *)hotKey;
 - (void)hitHotKeyQS:(PTHotKey *)hotKey;
 
-- (IBAction)changeSSHCheckbox:(id)sender;
-- (IBAction)changeWebCheckbox:(id)sender;
-- (IBAction)changeVNCCheckbox:(id)sender;
-- (IBAction)changeFTPCheckbox:(id)sender;
+//- (IBAction)changeSSHCheckbox:(id)sender;
+//- (IBAction)changeWebCheckbox:(id)sender;
+//- (IBAction)changeVNCCheckbox:(id)sender;
+//- (IBAction)changeFTPCheckbox:(id)sender;
 
 - (void)appDidLaunch:(NSNotification *)aNotification;
 

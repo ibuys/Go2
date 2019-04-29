@@ -98,14 +98,18 @@
     NSMutableDictionary *archiveArray = [afterArray objectAtIndex:0];
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:archiveArray requiringSecureCoding:YES error:&error];
     NSString *go2_name_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
-    NSURL *smartFolderPath = [NSURL fileURLWithPath:go2_name_data_path];
+//    NSURL *smartFolderPath = [NSURL fileURLWithPath:go2_name_data_path];
+//
+//    if ([data writeToURL:smartFolderPath options:NSDataWritingAtomic error:&error])
+//    {
+//        NSLog(@"data saved!");
+//    } else {
+//        NSLog(@"data not saved: %@", error);
+//    }
     
-    if ([data writeToURL:smartFolderPath options:NSDataWritingAtomic error:&error])
-    {
-        NSLog(@"data saved!");
-    } else {
-        NSLog(@"data not saved: %@", error);
-    }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:data forKey:@"smartFolders"];
+    [defaults synchronize];
 }
 
 
@@ -113,8 +117,10 @@
 
 - (void) loadDataFromFile
 {
-    NSString *go2_smart_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
-    NSData *data = [NSData dataWithContentsOfFile:go2_smart_data_path];
+//    NSString *go2_smart_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *data = [defaults objectForKey:@"smartFolders"];
+//    NSData *data = [NSData dataWithContentsOfFile:go2_smart_data_path];
     NSError *error;
     NSArray *classSetArray = [NSArray arrayWithObjects:
                               [NSArray class],

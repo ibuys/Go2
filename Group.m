@@ -140,4 +140,8 @@ static NSString *smartPredicateArchiveKey = @"smartPredicateKey";
     
 }
 
++ (BOOL)supportsSecureCoding{
+    return YES;
+}
+
 @end

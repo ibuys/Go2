@@ -96,15 +96,15 @@
     
     NSArray * afterArray = [self.groupsController selectedObjects];
     NSMutableDictionary *archiveArray = [afterArray objectAtIndex:0];
-
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:archiveArray requiringSecureCoding:NO error:&error];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:archiveArray requiringSecureCoding:YES error:&error];
     NSString *go2_name_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
+    NSURL *smartFolderPath = [NSURL fileURLWithPath:go2_name_data_path];
     
-    if ([data writeToFile:go2_name_data_path atomically:YES])
+    if ([data writeToURL:smartFolderPath options:NSDataWritingAtomic error:&error])
     {
         NSLog(@"data saved!");
     } else {
-        NSLog(@"data not saved...");
+        NSLog(@"data not saved: %@", error);
     }
 }
 
@@ -114,21 +114,32 @@
 - (void) loadDataFromFile
 {
     NSString *go2_smart_data_path = [[self applicationSupportFolder] stringByAppendingPathComponent:@"go2_smartP_data"];
-    NSLog(@"JBOutlineViewController found go2_smartP_data");
-    
     NSData *data = [NSData dataWithContentsOfFile:go2_smart_data_path];
-    NSLog(@"Data: %@", data);
     NSError *error;
-//    NSMutableDictionary *root = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    NSMutableDictionary *root = [NSKeyedUnarchiver unarchivedObjectOfClass:NSMutableDictionary.class fromData:data error:&error];
-    NSLog(@"archiveArray = %@", root);
-    NSLog(@"sourceListItems = %@", sourceListItems);
-    NSLog(@"sourceListItems after = %@", sourceListItems);
-    [self.groupsController addObject:root];
+    NSArray *classSetArray = [NSArray arrayWithObjects:
+                              [NSArray class],
+                              [NSImage class],
+                              [NSCompoundPredicate class],
+                              [NSMutableArray class],
+                              [NSDictionary class],
+                              [NSMutableDictionary class],
+                              [NSDate class],
+                              [NSNumber class],
+                              [Group class],
+                              nil];
+    NSSet *classSet = [NSSet setWithArray:classSetArray];
+
+    NSMutableDictionary *root = [NSKeyedUnarchiver unarchivedObjectOfClasses:classSet fromData:data error:&error];
+    
+    for (Group *smartGroup in root[@"children"]) {
+        NSPredicate *predicate = [smartGroup smartPredicate];
+        [predicate allowEvaluation];
+    }
+
+    if(root != NULL){
+        [self.groupsController addObject:root];
+    }
 }
-
-
-
 
 
 - (void) addData

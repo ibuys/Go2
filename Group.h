@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Group : NSObject <NSCoding>
+@interface Group : NSObject <NSSecureCoding>
 {
     NSString *title;
     NSString *identifier;
@@ -32,13 +32,13 @@
 @property (nonatomic) BOOL expandedByDefault;
 
 
+
 @property (readonly) BOOL isLeaf;
 
 //Convenience methods
 + (Group*) groupWithTitle:(NSString *)title;
 + (id)itemWithTitle:(NSString*)aTitle identifier:(NSString*)anIdentifier;
 + (id)itemWithTitle:(NSString*)aTitle identifier:(NSString*)anIdentifier icon:(NSImage*)anIcon;
-
 - (BOOL)hasBadge;
 - (BOOL)hasChildren;
 - (BOOL)hasIcon;

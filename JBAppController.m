@@ -10,6 +10,7 @@
 #import "JBGetDefaultApps.h"
 #import "JBQSDelegate.h"
 #import "Go2_AppDelegate.h"
+#import <ShortcutRecorder/SRRecorderControl.h>
 
 #define GO2_BUNDLE [NSBundle bundleWithIdentifier:@"com.farmdog.go2"]
 
@@ -68,7 +69,7 @@
 //
 //            // Register hotkey for quick search
 //        NSString *strQS = [defaults valueForKey:@"modValueQS"];
-//		
+//
 //		globalHotKeyQS = [[PTHotKey alloc] initWithIdentifier:@"SRTestQS" keyCombo:[PTKeyCombo keyComboWithKeyCode:[defaults integerForKey:@"keyComboCodeQS"] modifiers:[strQS integerValue]]];
 //		[globalHotKeyQS setTarget: self];
 //		[globalHotKeyQS setAction: @selector(hitHotKeyQS:)];
@@ -657,24 +658,20 @@
 
 - (IBAction)editPrefs:(id)sender
 {	
-	//NSLog(@"Step1");
+	NSLog(@"Step1");
 	
-	if (!prefsWindow) 
-	{
-		//NSLog(@"No prefs window!");
-//		[NSBundle loadNibNamed:@"Prefs" owner:self];
-        [[NSBundle mainBundle] loadNibNamed:@"Prefs" owner:self topLevelObjects:nil];
+    NSLog(@"No prefs window!");
+    [[NSBundle mainBundle] loadNibNamed:@"Prefs" owner:self topLevelObjects:nil];
 
-		//NSLog(@"Loading prefs window");
-	}
-	//NSLog(@"Step2");
-
+    NSLog(@"Loading prefs window");
+	NSLog(@"Step2");
+    
 	[prefsWindow makeKeyAndOrderFront:self];
-	//NSLog(@"Step3");
+	NSLog(@"Step3");
 
 //	[NSApp beginSheet:editPrefsSheet modalForWindow:mainWindow modalDelegate:self didEndSelector:NULL contextInfo:nil];
 //	[shortcutRecorder setCanCaptureGlobalHotKeys:YES];
-	//NSLog(@"Step4");
+	NSLog(@"Step4");
 
 	[shouldBeInDockButton setState:[[NSUserDefaults standardUserDefaults] boolForKey:@"hideIcon"]];
 	//NSLog(@"Step5");
@@ -696,8 +693,8 @@
 	//NSLog(@"Step10");
     
 //    [shortcutRecorder setKeyCombo:SRMakeKeyCombo([[NSUserDefaults standardUserDefaults] integerForKey:@"keyComboCode"], [[NSUserDefaults standardUserDefaults] integerForKey:@"keyComboCodeFlags"])];
-        //  NSLog(@"this should be in the shortcutRecorder control: %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"keyComboString"]);
-
+//    NSLog(@"this should be in the shortcutRecorder control: %@", [[NSUserDefaults standardUserDefaults] stringForKey:@"keyComboString"]);
+//
 //    [shortcutRecorderQS setKeyCombo:SRMakeKeyCombo([[NSUserDefaults standardUserDefaults] integerForKey:@"keyComboCodeQS"], [[NSUserDefaults standardUserDefaults] integerForKey:@"keyComboCodeFlagsQS"])];
 
 
@@ -800,17 +797,17 @@
 //
 //	[[NSUserDefaults standardUserDefaults] setInteger:[shortcutRecorder keyCombo].code forKey:@"keyComboCode"];
 //    [[NSUserDefaults standardUserDefaults] setInteger:[shortcutRecorder keyCombo].flags forKey:@"keyComboCodeFlags"];
-//    
+//
 //	[[NSUserDefaults standardUserDefaults] setObject:str forKey:@"modValue"];
 //	[[NSUserDefaults standardUserDefaults] setObject:[shortcutRecorder keyComboString] forKey:@"keyComboString"];
 //
-//    
+//
 //    NSUInteger newIntQS = [shortcutRecorderQS cocoaToCarbonFlags: [shortcutRecorderQS keyCombo].flags];
 //	NSString *strQS = [NSString stringWithFormat:@"%lu", newIntQS];
 //
 //    [[NSUserDefaults standardUserDefaults] setInteger:[shortcutRecorderQS keyCombo].code forKey:@"keyComboCodeQS"];
 //    [[NSUserDefaults standardUserDefaults] setInteger:[shortcutRecorderQS keyCombo].flags forKey:@"keyComboCodeFlagsQS"];
-//    
+//
 //	[[NSUserDefaults standardUserDefaults] setObject:strQS forKey:@"modValueQS"];
 //	[[NSUserDefaults standardUserDefaults] setObject:[shortcutRecorderQS keyComboString] forKey:@"keyComboStringQS"];
 
@@ -954,7 +951,7 @@
 //		//NSLog(@"keyComboDidChange");
 //	}
 //}
-//
+
 - (void)hitHotKey:(PTHotKey *)hotKey
 {
         //NSLog(@"Hit hot key");

@@ -10,7 +10,7 @@
 #import "JBGetDefaultApps.h"
 #import "JBQSDelegate.h"
 #import "Go2_AppDelegate.h"
-#import <ShortcutRecorder/SRRecorderControl.h>
+#import "SRRecorderControl.h"
 
 #define GO2_BUNDLE [NSBundle bundleWithIdentifier:@"com.farmdog.go2"]
 

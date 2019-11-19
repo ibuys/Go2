@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		2F7446990DB6B7EA00F9684A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F7446970DB6B7EA00F9684A /* MainMenu.xib */; };
+		4144C5C823847563002B2C69 /* SRShortcutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5AD23847560002B2C69 /* SRShortcutController.m */; };
+		4144C5C923847563002B2C69 /* SRRecorderControlStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5B023847560002B2C69 /* SRRecorderControlStyle.m */; };
+		4144C5CB23847563002B2C69 /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5B223847560002B2C69 /* SRCommon.m */; };
+		4144C5CC23847563002B2C69 /* SRKeyEquivalentModifierMaskTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5B723847561002B2C69 /* SRKeyEquivalentModifierMaskTransformer.m */; };
+		4144C5CD23847563002B2C69 /* SRShortcutAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5B823847561002B2C69 /* SRShortcutAction.m */; };
+		4144C5CE23847563002B2C69 /* SRModifierFlagsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5B923847561002B2C69 /* SRModifierFlagsTransformer.m */; };
+		4144C5CF23847563002B2C69 /* SRKeyEquivalentTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5BA23847561002B2C69 /* SRKeyEquivalentTransformer.m */; };
+		4144C5D023847563002B2C69 /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5BB23847562002B2C69 /* SRRecorderControl.m */; };
+		4144C5D123847563002B2C69 /* SRKeyBindingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5BD23847562002B2C69 /* SRKeyBindingTransformer.m */; };
+		4144C5D223847563002B2C69 /* SRShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5BF23847562002B2C69 /* SRShortcutValidator.m */; };
+		4144C5D323847563002B2C69 /* SRShortcutFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5C323847562002B2C69 /* SRShortcutFormatter.m */; };
+		4144C5D423847563002B2C69 /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5C423847563002B2C69 /* SRKeyCodeTransformer.m */; };
+		4144C5D523847563002B2C69 /* SRShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 4144C5C523847563002B2C69 /* SRShortcut.m */; };
 		41BAA57E1F6DC09C00F3BC5E /* JBOutlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAA57D1F6DC09C00F3BC5E /* JBOutlineViewController.m */; };
 		41BAA5811F6DC0AD00F3BC5E /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BAA5801F6DC0AD00F3BC5E /* Group.m */; };
 		541F68C5158BAE1F00BA12CF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5B6BD8141C61FC00D97417 /* CoreData.framework */; };
@@ -78,6 +91,33 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* Go2_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Go2_Prefix.pch; sourceTree = "<group>"; };
+		4144C5AC23847560002B2C69 /* SRRecorderControlStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderControlStyle.h; sourceTree = "<group>"; };
+		4144C5AD23847560002B2C69 /* SRShortcutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRShortcutController.m; sourceTree = "<group>"; };
+		4144C5AE23847560002B2C69 /* SRShortcutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRShortcutController.h; sourceTree = "<group>"; };
+		4144C5AF23847560002B2C69 /* SRModifierFlagsTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRModifierFlagsTransformer.h; sourceTree = "<group>"; };
+		4144C5B023847560002B2C69 /* SRRecorderControlStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderControlStyle.m; sourceTree = "<group>"; };
+		4144C5B223847560002B2C69 /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCommon.m; sourceTree = "<group>"; };
+		4144C5B323847561002B2C69 /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCommon.h; sourceTree = "<group>"; };
+		4144C5B423847561002B2C69 /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyCodeTransformer.h; sourceTree = "<group>"; };
+		4144C5B523847561002B2C69 /* SRKeyEquivalentModifierMaskTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyEquivalentModifierMaskTransformer.h; sourceTree = "<group>"; };
+		4144C5B623847561002B2C69 /* SRKeyBindingTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyBindingTransformer.h; sourceTree = "<group>"; };
+		4144C5B723847561002B2C69 /* SRKeyEquivalentModifierMaskTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRKeyEquivalentModifierMaskTransformer.m; sourceTree = "<group>"; };
+		4144C5B823847561002B2C69 /* SRShortcutAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRShortcutAction.m; sourceTree = "<group>"; };
+		4144C5B923847561002B2C69 /* SRModifierFlagsTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRModifierFlagsTransformer.m; sourceTree = "<group>"; };
+		4144C5BA23847561002B2C69 /* SRKeyEquivalentTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRKeyEquivalentTransformer.m; sourceTree = "<group>"; };
+		4144C5BB23847562002B2C69 /* SRRecorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRecorderControl.m; sourceTree = "<group>"; };
+		4144C5BC23847562002B2C69 /* SRRecorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRecorderControl.h; sourceTree = "<group>"; };
+		4144C5BD23847562002B2C69 /* SRKeyBindingTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRKeyBindingTransformer.m; sourceTree = "<group>"; };
+		4144C5BE23847562002B2C69 /* ShortcutRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShortcutRecorder.h; sourceTree = "<group>"; };
+		4144C5BF23847562002B2C69 /* SRShortcutValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRShortcutValidator.m; sourceTree = "<group>"; };
+		4144C5C023847562002B2C69 /* SRShortcutValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRShortcutValidator.h; sourceTree = "<group>"; };
+		4144C5C123847562002B2C69 /* SRShortcutFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRShortcutFormatter.h; sourceTree = "<group>"; };
+		4144C5C223847562002B2C69 /* SRKeyEquivalentTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRKeyEquivalentTransformer.h; sourceTree = "<group>"; };
+		4144C5C323847562002B2C69 /* SRShortcutFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRShortcutFormatter.m; sourceTree = "<group>"; };
+		4144C5C423847563002B2C69 /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRKeyCodeTransformer.m; sourceTree = "<group>"; };
+		4144C5C523847563002B2C69 /* SRShortcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRShortcut.m; sourceTree = "<group>"; };
+		4144C5C623847563002B2C69 /* SRShortcutAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRShortcutAction.h; sourceTree = "<group>"; };
+		4144C5C723847563002B2C69 /* SRShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRShortcut.h; sourceTree = "<group>"; };
 		41A40FE921D6857E00AF0087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		41BAA57C1F6DC09C00F3BC5E /* JBOutlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBOutlineViewController.h; sourceTree = "<group>"; };
 		41BAA57D1F6DC09C00F3BC5E /* JBOutlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBOutlineViewController.m; sourceTree = "<group>"; };
@@ -237,6 +277,7 @@
 		29B97314FDCFA39411CA2CEA /* Go2 */ = {
 			isa = PBXGroup;
 			children = (
+				4144C5AA23847536002B2C69 /* 3rdParty */,
 				7756732906782D8800D1FEB8 /* Models */,
 				891544651279E01400E8B358 /* StatusItem */,
 				080E96DDFE201D6D7F000001 /* View */,
@@ -287,6 +328,48 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4144C5AA23847536002B2C69 /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				4144C5AB2384754C002B2C69 /* ShortcutRecorder */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
+		4144C5AB2384754C002B2C69 /* ShortcutRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				4144C5BE23847562002B2C69 /* ShortcutRecorder.h */,
+				4144C5B323847561002B2C69 /* SRCommon.h */,
+				4144C5B223847560002B2C69 /* SRCommon.m */,
+				4144C5B623847561002B2C69 /* SRKeyBindingTransformer.h */,
+				4144C5BD23847562002B2C69 /* SRKeyBindingTransformer.m */,
+				4144C5B423847561002B2C69 /* SRKeyCodeTransformer.h */,
+				4144C5C423847563002B2C69 /* SRKeyCodeTransformer.m */,
+				4144C5B523847561002B2C69 /* SRKeyEquivalentModifierMaskTransformer.h */,
+				4144C5B723847561002B2C69 /* SRKeyEquivalentModifierMaskTransformer.m */,
+				4144C5C223847562002B2C69 /* SRKeyEquivalentTransformer.h */,
+				4144C5BA23847561002B2C69 /* SRKeyEquivalentTransformer.m */,
+				4144C5AF23847560002B2C69 /* SRModifierFlagsTransformer.h */,
+				4144C5B923847561002B2C69 /* SRModifierFlagsTransformer.m */,
+				4144C5BC23847562002B2C69 /* SRRecorderControl.h */,
+				4144C5BB23847562002B2C69 /* SRRecorderControl.m */,
+				4144C5AC23847560002B2C69 /* SRRecorderControlStyle.h */,
+				4144C5B023847560002B2C69 /* SRRecorderControlStyle.m */,
+				4144C5C723847563002B2C69 /* SRShortcut.h */,
+				4144C5C523847563002B2C69 /* SRShortcut.m */,
+				4144C5C623847563002B2C69 /* SRShortcutAction.h */,
+				4144C5B823847561002B2C69 /* SRShortcutAction.m */,
+				4144C5AE23847560002B2C69 /* SRShortcutController.h */,
+				4144C5AD23847560002B2C69 /* SRShortcutController.m */,
+				4144C5C123847562002B2C69 /* SRShortcutFormatter.h */,
+				4144C5C323847562002B2C69 /* SRShortcutFormatter.m */,
+				4144C5C023847562002B2C69 /* SRShortcutValidator.h */,
+				4144C5BF23847562002B2C69 /* SRShortcutValidator.m */,
+			);
+			path = ShortcutRecorder;
 			sourceTree = "<group>";
 		};
 		7756732906782D8800D1FEB8 /* Models */ = {
@@ -390,7 +473,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1120;
 				TargetAttributes = {
 					8D1107260486CEB800E47090 = {
 						DevelopmentTeam = 22VH3XXRN4;
@@ -472,21 +555,34 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				77C8280E06725ACE000B614F /* Go2_AppDelegate.m in Sources */,
+				4144C5D023847563002B2C69 /* SRRecorderControl.m in Sources */,
 				770B37ED0679A11B001EADE2 /* Go2_DataModel.xcdatamodel in Sources */,
 				89D51B891278797A001CECCA /* JBNiceWindow.m in Sources */,
 				89D51B8A1278797A001CECCA /* JBTableView.m in Sources */,
 				89D51B8B1278797A001CECCA /* JBTableViewCell.m in Sources */,
+				4144C5D523847563002B2C69 /* SRShortcut.m in Sources */,
 				89D51B9C1278799F001CECCA /* JBTableViewDelegate.m in Sources */,
 				89D51B9D1278799F001CECCA /* JBMenuItem.m in Sources */,
+				4144C5C923847563002B2C69 /* SRRecorderControlStyle.m in Sources */,
 				89D51B9E1278799F001CECCA /* ImportText.m in Sources */,
+				4144C5CF23847563002B2C69 /* SRKeyEquivalentTransformer.m in Sources */,
 				89D51B9F1278799F001CECCA /* AppController.m in Sources */,
+				4144C5CE23847563002B2C69 /* SRModifierFlagsTransformer.m in Sources */,
 				89D51BA01278799F001CECCA /* JBAppController.m in Sources */,
+				4144C5D223847563002B2C69 /* SRShortcutValidator.m in Sources */,
 				41BAA57E1F6DC09C00F3BC5E /* JBOutlineViewController.m in Sources */,
+				4144C5D423847563002B2C69 /* SRKeyCodeTransformer.m in Sources */,
+				4144C5C823847563002B2C69 /* SRShortcutController.m in Sources */,
 				89D51BA11278799F001CECCA /* JBValidateTextField.m in Sources */,
+				4144C5D323847563002B2C69 /* SRShortcutFormatter.m in Sources */,
 				41BAA5811F6DC0AD00F3BC5E /* Group.m in Sources */,
 				89D51BA21278799F001CECCA /* JBGetDefaultApps.m in Sources */,
 				89D51BA31278799F001CECCA /* JBStringToIconTransformer.m in Sources */,
+				4144C5D123847563002B2C69 /* SRKeyBindingTransformer.m in Sources */,
+				4144C5CB23847563002B2C69 /* SRCommon.m in Sources */,
+				4144C5CC23847563002B2C69 /* SRKeyEquivalentModifierMaskTransformer.m in Sources */,
 				89154279127923E600E8B358 /* JBSmallMenuView.m in Sources */,
+				4144C5CD23847563002B2C69 /* SRShortcutAction.m in Sources */,
 				8915443D1279DDC800E8B358 /* JBStatusItemView.m in Sources */,
 				89F43CE013000FBD00402136 /* JBLaunch.m in Sources */,
 				89F43D8A130012A000402136 /* JBSaveAndLoad.m in Sources */,
@@ -531,6 +627,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = 22VH3XXRN4;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -570,6 +667,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 22VH3XXRN4;
+				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -647,7 +745,7 @@
 				GCC_WARN_UNUSED_PARAMETER = NO;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				PROVISIONING_PROFILE = "";
@@ -709,7 +807,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_PKGINFO_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
 				PROVISIONING_PROFILE = "";
